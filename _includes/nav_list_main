@@ -25,7 +25,7 @@
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "C#" %}
+                    {% if category[0] == "Cs" %}
                         <li><a href="/categories/cs" class="">C# ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
