@@ -1,5 +1,5 @@
 ---
-title: "C"
+title: "C언어"
 layout: archive
 permalink: categories/c
 author_profile: true

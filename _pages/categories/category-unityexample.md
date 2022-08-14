@@ -1,5 +1,5 @@
 ---
-title: "UnityExample"
+title: "유니티 예제"
 layout: archive
 permalink: categories/unityexample
 author_profile: true

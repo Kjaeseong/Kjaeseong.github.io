@@ -1,5 +1,5 @@
 ---
-title: "DesignPattern"
+title: "디자인 패턴"
 layout: archive
 permalink: categories/designpattern
 author_profile: true

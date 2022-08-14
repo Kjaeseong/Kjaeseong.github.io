@@ -1,5 +1,5 @@
 ---
-title: "C#"
+title: "C#언어"
 layout: archive
 permalink: categories/cs
 author_profile: true
