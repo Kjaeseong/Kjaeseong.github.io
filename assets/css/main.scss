@@ -7,6 +7,7 @@ search: false
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 <<<<<<< HEAD
+<<<<<<< HEAD
 @import "minimal-mistakes"; // main partials
 
 // 카페24 아네모네
@@ -32,6 +33,9 @@ search: false
     font-weight: normal;
     font-style: normal;
 }
+=======
+@import "minimal-mistakes"; // main partials
+>>>>>>> parent of d6ab174 (Add Font)
 =======
 @import "minimal-mistakes"; // main partials
 >>>>>>> parent of d6ab174 (Add Font)
