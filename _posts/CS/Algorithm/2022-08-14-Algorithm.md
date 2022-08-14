@@ -1,8 +1,8 @@
 ---
-title:  "테스트포스트" 
+title: "Algorithm 카테고리 테스트" 
 
 categories:
-  - Cpp
+  - Algorithm
 
 toc: true
 toc_sticky: true
@@ -11,5 +11,4 @@ date: 2022-08-14
 last_modified_at: 2022-08-14
 ---
 
-# 첫번째 포스트
-- 테스트용
+# 제목

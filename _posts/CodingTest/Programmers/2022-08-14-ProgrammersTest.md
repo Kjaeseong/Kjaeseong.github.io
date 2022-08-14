@@ -1,8 +1,8 @@
 ---
-title:  "테스트포스트2" 
+title: "Programmers 카테고리 테스트" 
 
 categories:
-  - C
+  - Programmers
 
 toc: true
 toc_sticky: true
@@ -11,5 +11,4 @@ date: 2022-08-14
 last_modified_at: 2022-08-14
 ---
 
-# 두번째 포스트
-- 아 왜 안되냐고 ㅠㅠ
+# 제목
