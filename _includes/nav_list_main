@@ -48,14 +48,14 @@
         <span class="nav__sub-title">Unity</span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "Unity Study" %}
+                    {% if category[0] == "UnityStudy" %}
                         <li><a href="/categories/unitystudy" class="">Unity Study ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "Unity Example" %}
+                    {% if category[0] == "UnityExample" %}
                         <li><a href="/categories/unityexample" class="">Unity Example ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
@@ -70,7 +70,7 @@
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "Data Structure" %}
+                    {% if category[0] == "DataStructure" %}
                         <li><a href="/categories/datastructure" class="">Data Structure({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
@@ -85,7 +85,7 @@
         <span class="nav__sub-title">ETC</span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "Design Pattern" %}
+                    {% if category[0] == "DesignPattern" %}
                         <li><a href="/categories/designpattern" class="">Design Pattern ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
