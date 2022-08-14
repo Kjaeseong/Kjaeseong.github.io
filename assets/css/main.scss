@@ -11,7 +11,7 @@ search: false
 // 카페24 아네모네
 @font-face {
     font-family: 'Cafe24Ohsquare';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Cafe24Ohsquare.woff') format('woff');
+    src: local('Cafe24Ohsquare'), url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Cafe24Ohsquare.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -19,7 +19,7 @@ search: false
 // 다이어리체
 @font-face {
     font-family: 'EarlyFontDiary';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_220508@1.0/EarlyFontDiary.woff2') format('woff2');
+    src: local('EarlyFontDiary'), url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_220508@1.0/EarlyFontDiary.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
