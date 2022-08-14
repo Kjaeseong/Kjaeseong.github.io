@@ -1,22 +1,21 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
-search: false
 ---
 
 @charset "utf-8";
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
-<<<<<<< HEAD
-<<<<<<< HEAD
 @import "minimal-mistakes"; // main partials
 
-// 카페24 아네모네
+
+// "Cafe24Oneprettynight"
 @font-face {
-    font-family: 'Cafe24Ohsquare';
-    src: local('Cafe24Ohsquare'), url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Cafe24Ohsquare.woff') format('woff');
+    font-family: 'Cafe24Oneprettynight';
+    src: local('Cafe24Oneprettynight'), url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Oneprettynight.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
+
 
 // 다이어리체
 @font-face {
@@ -33,9 +32,3 @@ search: false
     font-weight: normal;
     font-style: normal;
 }
-=======
-@import "minimal-mistakes"; // main partials
->>>>>>> parent of d6ab174 (Add Font)
-=======
-@import "minimal-mistakes"; // main partials
->>>>>>> parent of d6ab174 (Add Font)
