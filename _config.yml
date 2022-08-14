@@ -110,12 +110,12 @@ author:
   # location         : "Somewhere"
   email            :
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "sung9513@gmail.com"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/Kjaeseong"
+    #  label: "Email"
+    #  icon: "fas fa-fw fa-envelope-square"
+    #  url: "sung9513@gmail.com"
     #- label: "Instagram"
     #  icon: "fab fa-fw fa-instagram"
     #  url: "https://instagram.com/06.25ash"
