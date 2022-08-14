@@ -60,16 +60,7 @@ classes: wide
         
 
 
-        <!-- archive 중간 광고 -->
-        <ins class="adsbygoogle"
-             style="display:block"
-            data-ad-client="ca-pub-6111782407607310"
-            data-ad-slot="5458515780"
-            data-ad-format="auto"
-            data-full-width-responsive="true"></ins>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
+
       </section>
       <footer class="page__meta">
         {% if site.data.ui-text[site.locale].meta_label %}
@@ -93,18 +84,5 @@ classes: wide
           {% include archive-single3.html %}
         {% endfor %}
     </div>
-  {% comment %}<!-- otherwise show recent posts if no related when `related: true` -->{% endcomment %}
-  {% elsif page.id and page.related %}
-    <div class="page__related">
-      <h4 class="page__related-title">{{ "최근 글" }}</h4>
-      <div class="grid__wrapper">
-        {% for post in site.posts limit:3 %}
-          {% if post.id == page.id %}
-            {% continue %}
-          {% endif %}
-          {% include archive-single.html type="grid" %}
-        {% endfor %}
-      </div>
-    </div>
-  {% endif %}
+  
 </div>
