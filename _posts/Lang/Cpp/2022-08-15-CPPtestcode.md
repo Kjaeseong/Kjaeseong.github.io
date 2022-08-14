@@ -2,7 +2,7 @@
 title:  "C++ 코드블럭 테스트" 
 
 categories:
-  -  Cpp
+  - Cpp
 
 toc: true
 toc_sticky: true
