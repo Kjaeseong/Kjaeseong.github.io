@@ -63,6 +63,29 @@
                 {% endfor %}
             </ul>
 
+            <span class="nav__sub-title">CS</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Algorithm" %}
+                        <li><a href="/categories/algorithm" class="">Algorithm ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "DataStructure" %}
+                        <li><a href="/categories/datastructure" class="">Data Structure ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Network" %}
+                        <li><a href="/categories/network" class="">Network ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+
         <span class="nav__sub-title">ETC.</span>
             <ul>
                 {% for category in site.categories %}
@@ -85,114 +108,6 @@
                     {% endif %}
                 {% endfor %}
             </ul>
-            
-        <span class="nav__sub-title">CS</span>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "Algorithm Lesson 1" %}
-                        <li><a href="/categories/algorithm-lesson-1" class="">알고리즘 강의1 ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "Algorithm Lesson 2" %}
-                        <li><a href="/categories/algorithm-lesson-2" class="">알고리즘 강의2 ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "DataStructure" %}
-                        <li><a href="/categories/data-structure" class="">C 자료구조 강의 1({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "DataStructure2" %}
-                        <li><a href="/categories/data-structure2" class="">C 자료구조 강의 2({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "Network" %}
-                        <li><a href="/categories/network" class="">네트워크 ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-        <span class="nav__sub-title">Server</span>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "Server1" %}
-                        <li><a href="/categories/server1" class="">C# 유니티 서버 ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-        <span class="nav__sub-title">DB</span>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "DB" %}
-                        <li><a href="/categories/db" class="">MySQL ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "Programmers SQL" %}
-                        <li><a href="/categories/programmers-sql" class="">프로그래머스 SQL ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-        <span class="nav__sub-title">etc</span>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "Blog" %}
-                        <li><a href="/categories/blog" class="">Blog Dev ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "Design Pattern" %}
-                        <li><a href="/categories/design-pattern" class="">디자인 패턴 ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "Blender" %}
-                        <li><a href="/categories/blender" class="">Blender ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "Git" %}
-                        <li><a href="/categories/git" class="">Git & Github ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "VS" %}
-                        <li><a href="/categories/vs" class="">비주얼 스튜디오 ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "Bitcoin" %}
-                        <li><a href="/categories/bitcoin" class="">블록체인 암호화폐 ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-      </li>
-      <li>	
-            <br>      
-            <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fansohxxn.github.io&count_bg=%23FFCC35&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=visitors&edge_flat=false">
-      </li>
   </ul>
 </nav>
 
