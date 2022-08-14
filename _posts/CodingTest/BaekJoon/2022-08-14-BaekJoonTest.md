@@ -2,7 +2,7 @@
 title: "BaekJoon 카테고리 테스트" 
 
 categories:
-  - Baekjoon
+  - BaekJoon
 
 toc: true
 toc_sticky: true
