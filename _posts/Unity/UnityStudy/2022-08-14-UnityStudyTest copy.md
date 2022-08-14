@@ -1,11 +1,14 @@
 ---
-title: "_post하위 폴더 테스트" 
+title: "UnityStudy 두번째 테스트" 
+
 categories:
-  -  Cs
+  - UnityStudy
+
 toc: true
 toc_sticky: true
+
 date: 2022-08-14
 last_modified_at: 2022-08-14
 ---
 
-# 제목
+# 제발..이제 되어줘....
