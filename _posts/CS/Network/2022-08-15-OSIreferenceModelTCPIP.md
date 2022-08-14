@@ -76,8 +76,6 @@ last_modified_at: 2022-08-15
 - 디캡슐레이션(decapsulation) : 수신 측에서 자신의 헤더 제거
 - 트레일러(trailer) : '링크 계층'에서 에러를 확인하기 위해 프레임의 꼬리에 추가하는 필드
 ![이미지1][인/디캡슐레이션]
-OSI참조 모델과 인캡슐레이션, 디캡슐레이션
-출처 : https://www.technologyuk.net/telecommunications/telecom-principles/osi-reference-model.shtml
 
 ## TCP/IP
 - TCP/IP는 인터넷에서 사용되는 여러 가지 프로토콜을 통틀어 지칭하는 단어
