@@ -1,4 +1,15 @@
-[인/디캡슐레이션]: ./img/Encapsulation,Decapsulation.png
+---
+title: "(작성중)Network - OSI 참조 모델(OSI reference model)과 TCP/IP" 
+
+categories:
+  - Network
+
+toc: true
+toc_sticky: true
+
+date: 2022-08-15
+last_modified_at: 2022-08-15
+---
 
 # Network - OSI 참조 모델(OSI reference model)과 TCP/IP
 ## OSI 참조 모델
