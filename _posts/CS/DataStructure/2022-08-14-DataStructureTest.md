@@ -1,5 +1,5 @@
 ---
-title: "DataStructure 카테고리 테스트" 
+title: "자료구조 카테고리 테스트" 
 
 categories:
   - DataStructure
@@ -7,8 +7,9 @@ categories:
 toc: true
 toc_sticky: true
 
-date: 2022-08-14
-last_modified_at: 2022-08-14
+date: 2022-08-15
+last_modified_at: 2022-08-15
 ---
 
-# 제목
+# 자료구조 카테고리 테스트용 본문 제목
+- 자료구조 카테고리 테스트용 본문
