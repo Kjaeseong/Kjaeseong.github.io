@@ -1,11 +1,15 @@
-[자바컴파일]: ./img/자바컴파일.png
-[어셈블리구성]: ./img/어셈블리구성.png
-[CS계층]: ./img/CS계층.png
-[매니지드힙포인터]: ./img/매니지드힙포인터.png
-[멀티스레드환경가비지컬렉션]: ./img/멀티스레드환경가비지컬렉션.png
-[유니티가비지컬렉션]: ./img/유니티가비지컬렉션.png
-[참조카운팅]: ./img/참조카운팅.png
-[추적가비지컬렉션]: ./img/추적가비지컬렉션.png
+---
+title:  "CLR C#과 Unity C#의 차이"
+
+categories:
+  - Cs
+
+toc: true
+toc_sticky: true
+
+date: 2022-08-15
+last_modified_at: 2022-08-15
+---
 
 # CLR C#과 Unity C#의 차이
 
@@ -13,7 +17,7 @@
 - C#의 동작 원리를 이해한다.
 - Unity C#의 동작 원리를 이해한다.
 - 둘의 차이점에 대해서 설명할 수 있다.
----
+
 ## C#
 - MicroSoft개발.
 - 완전 객체지향 프로그래밍 언어
@@ -25,7 +29,7 @@
 
 ### .NET 아키텍처
 
-![이미지1][자바컴파일]
+![이미지1](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/%EC%9E%90%EB%B0%94%EC%BB%B4%ED%8C%8C%EC%9D%BC.png?raw=true)
 
 - 하나의 언어로 다양한 플랫폼을 지원하기 위함.
 - 운영체제 > .NET > 프로그래밍 언어
@@ -35,7 +39,7 @@
 
 ### 빌드
 
-![이미지2][어셈블리구성]
+![이미지2](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/%EC%96%B4%EC%85%88%EB%B8%94%EB%A6%AC%EA%B5%AC%EC%84%B1.png?raw=true)
 
 - C#은 컴파일시 
   - CLI 사양을 준수하는 중간 언어(IL - Intermediate Language)로 컴파일
@@ -52,7 +56,7 @@
 
 ### 공용 타입 시스템(CTS - Common Type System)
 
-![이미지3][CS계층]
+![이미지3](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/CS%EA%B3%84%EC%B8%B5.png?raw=true)
 
 - 여러 .NET언어를 지원하기 위함
 - .NET의 형식
@@ -107,11 +111,11 @@ int a = (int)o;
   - 가비지 컬렉터(Gabage Collector)가 더 이상 사용하지 않는 메모리를 재사용
   - 객체의 사용유무를 가정(Liveness)한다.
 
-![이미지4][추적가비지컬렉션]
+![이미지4](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/%EC%B6%94%EC%A0%81%EA%B0%80%EB%B9%84%EC%A7%80%EC%BB%AC%EB%A0%89%EC%85%98.png?raw=true)
 
   - 추적 가비지 컬렉션(Tracing Garbage Collection) : 적 방식에서는 도달 가능성(Reachability)으로 생존을 가정하는데 루트(Root)를 사용하여 해당 메모리까지 도달할 수 있는지 보고, 도달되지 못한 메모리는 가비지로 가정한다.
   
-![이미지5][참조카운팅]
+![이미지5](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/%EC%B0%B8%EC%A1%B0%EC%B9%B4%EC%9A%B4%ED%8C%85.png?raw=true)
 
   - 참조 카운팅(Reference Couting) : 해당 메모리에 참조하는 것이 없을 때  가비지로 가정. 참조 카운팅 방법은 순환 참조(Circular Reference)를 주의해야 하는데, 이를 방지하기 위해 약한 참조(Week Reference)라는 개념을 사용한다
 - 가비지컬렉션 종류
@@ -128,7 +132,7 @@ int a = (int)o;
   - 최근에 만들어진 객체일 수록 수명이 짧고 오래 사용된 객체일 수록 수명이 길어 재사용할 메모리를 빠르게 분류할 수 있다.
   - 메모리 할당은 0세대에서만 일어나는데 최근에 만들어진 객체끼리 서로 연관되는 경향이 있어 캐싱 측면에서 좋다.
   
-![이미지5][매니지드힙포인터]
+![이미지5](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/%EB%A7%A4%EB%8B%88%EC%A7%80%EB%93%9C%ED%9E%99%ED%8F%AC%EC%9D%B8%ED%84%B0.png?raw=true)
 
 ### 메모리 할당
 - C#에서 모든 참조 타입 객체는 매니지드 힙의 0세대 할당
@@ -150,7 +154,7 @@ int a = (int)o;
   - 3. 2세대 
 - 주의사항
   
-  ![이미지6][멀티스레드환경가비지컬렉션]
+  ![이미지6](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/%EB%A9%80%ED%8B%B0%EC%8A%A4%EB%A0%88%EB%93%9C%ED%99%98%EA%B2%BD%EA%B0%80%EB%B9%84%EC%A7%80%EC%BB%AC%EB%A0%89%EC%85%98.png?raw=true)
 
   - 자원을 적게 소모하는 연산이 아니다.
   - 멀티스레드 환경에서 가비지컬렉션 수행되는 동안 다른 스레드가 중단(Suspended)된다.
@@ -162,7 +166,7 @@ int a = (int)o;
 ---
 ## Unity C#
 
-![이미지7][유니티가비지컬렉션]
+![이미지7](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/%EC%9C%A0%EB%8B%88%ED%8B%B0%EA%B0%80%EB%B9%84%EC%A7%80%EC%BB%AC%EB%A0%89%EC%85%98.png?raw=true)
 
 - 유니티에서 사용하는 .NET은 2가지
   - Mono : 크로스플랫폼 지원 오픈소스
