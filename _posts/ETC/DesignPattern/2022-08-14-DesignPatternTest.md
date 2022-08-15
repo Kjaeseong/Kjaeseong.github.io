@@ -13,7 +13,7 @@ last_modified_at: 2022-08-15
 
 # 싱글톤(Singleton) 패턴
 
-![싱글톤이미지]()
+![싱글톤이미지](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/SingletonPattern.png?raw=true)
 ## 개요
 ![이미지1][싱글톤이미지]
 - 단일의 인스턴스(Static) 보장, 이에 대한 전역적인 접근점 제공
