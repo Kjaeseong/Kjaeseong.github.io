@@ -1,5 +1,5 @@
 ---
-title: "(작성중)STL_std::forward_list / std::list" 
+title: "STL_std::forward_list / std::list" 
 
 categories:
   - DataStructure
@@ -13,6 +13,7 @@ last_modified_at: 2022-08-15
 
 # 개요
 - forward_list 및 list의 특징과 구현 방법을 알아본다.
+- 연결 리스트의 특징을 숙지하고 응용한다.
 
 ## 연결 리스트
 - 노드라는 메모리 청크에 데이터를 저장, 연결하는 방식
