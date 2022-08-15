@@ -85,11 +85,15 @@ for(int i = 0; i < n; i++)
   - Big-O : 가장 많이 사용되며 점근적 상한선을 제공한다.
   - Big-θ
   - Big-Ω
+  - 
+> O(1) < O(logn) < O(n) < O(nlogn) < O(n2) < O(n3) < O(2n) < O(n!)
+
 - 한 알고리즘이 다른 알고리즘보다 빨라도 같은 수치로 표기될 수 있다.
   - 면밀한 분석이 필요할 때도 있다.
   - 표기법상 시간복잡도가 적다고 해도 모든 경우에 프로그램의 속도가 빠른 것은 아니다.
+  - 아래 그림에서 확인할 수 있다
+![이미지1](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/Big_O.jpg?raw=true)
 
-> O(1) < O(logn) < O(n) < O(nlogn) < O(n2) < O(n3) < O(2n) < O(n!)
 
 ### 공간복잡도(space complexity)
 - 알고리즘을 수행하는데 필요한 자원 공간의 양
