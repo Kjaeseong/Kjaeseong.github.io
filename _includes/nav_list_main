@@ -5,7 +5,7 @@
   <label for="ac-toc">{{ site.data.ui-text[site.locale].menu_label }}</label>
   <ul class="nav__items" id="category_tag_menu">
       <li>
-            <span style="font-family:'Cafe24Oneprettynight';">전체 게시글 : </style> <span style="font-family:'Cafe24Oneprettynight';">{{sum}}</style>
+            <span style="font-family:'EarlyFontDiary';">전체 게시글 : </style> <span style="font-family:'EarlyFontDiary';">{{sum}}</style>
       </li>
       <li>
         <span class="nav__sub-title">Programming</span>
