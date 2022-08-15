@@ -28,9 +28,11 @@ last_modified_at: 2022-08-15
 
 ## 구현
 - 총과 탄환을 예시로 구현
+  
 ##### Gun
 - 총의 Start() 함수에서 탄환 미리 생성(Bullet.SetActive(false))
 - 발사 명령시 탄환은 총의 위치로 설정, 활성(Bullet.SetActive(true))
+  
 ```cs
 using System.Collections;
 using System.Collections.Generic;
@@ -90,6 +92,7 @@ public class Gun : MonoBehaviour
 
 ##### Bullet
 - 탄환 활성시 설정 시간만큼 이동 후 비활성(Bullet.SetActive(false))
+  
 ```cs
 using System.Collections;
 using System.Collections.Generic;
