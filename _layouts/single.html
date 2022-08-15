@@ -57,8 +57,12 @@ classes: wide
         {{ content }}
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        
-  
+      </section>
+    </div>
+
+    {% if jekyll.environment == 'production' and site.comments.provider and page.comments %}
+        {% include comments.html %}
+    {% endif %}
 
 
   </article>
