@@ -4,9 +4,9 @@
   <input id="ac-toc" name="accordion-toc" type="checkbox" />
   <label for="ac-toc">{{ site.data.ui-text[site.locale].menu_label }}</label>
   <ul class="nav__items" id="category_tag_menu">
+</li>
+<li>
         <span class="nav__sub-title">Programming</span>
-    </li>
-    <li>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "C" %}
