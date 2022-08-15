@@ -1,5 +1,5 @@
 ---
-title: "(작성중)STL_std::list" 
+title: "(작성중)STL_std::forward_list / std::list" 
 
 categories:
   - DataStructure
@@ -12,7 +12,7 @@ last_modified_at: 2022-08-15
 ---
 
 # 개요
-- list의 특징과 구현 방법을 알아본다.
+- forward_list 및 list의 특징과 구현 방법을 알아본다.
 
 ## std::list
 - 동적 배열을 쉽게 관리하기 위해 C++ STL에서 지원하는 자료구조
