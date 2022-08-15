@@ -108,7 +108,6 @@
             </ul>
         </li>
 
-
         <br>
         <li>
             <span style="font-family:'EarlyFontDiary';">전체 게시글 : </style> <span style="font-family:'EarlyFontDiary';">{{sum}}</style>
