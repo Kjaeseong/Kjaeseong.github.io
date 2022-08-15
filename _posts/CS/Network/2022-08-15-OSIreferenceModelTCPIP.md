@@ -1,5 +1,5 @@
 ---
-title: "Network - OSI 참조 모델(OSI reference model)과 TCP/IP" 
+title: "OSI 참조 모델(OSI reference model)과 TCP/IP" 
 
 categories:
   - Network
