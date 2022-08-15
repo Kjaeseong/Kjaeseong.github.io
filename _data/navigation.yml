@@ -4,6 +4,8 @@ main:
     url: /index.html
   #- title: "About"
     #url: /about/
+  - title: "Search"
+    url: /search/
   - title: "Category"
     url: /categories/
   #- title: "Tag"
