@@ -32,7 +32,7 @@ last_modified_at: 2022-08-15
 
 ## 구현
 
-##### 옵저버 추상클래스
+### 옵저버 추상클래스
 - 옵저버들이 구현해야 할 인터페이스 메서드
 ```cs
 public abstract class observer
@@ -42,7 +42,7 @@ public abstract class observer
 }
 ```
 
-##### 옵저버 구현클래스
+### 옵저버 구현클래스
 - 대상 타입의 클래스에서 메서드 실행
 ```cs
 using System.Collections;
@@ -58,7 +58,7 @@ public class ConcreteObserver1 : Observer
 }
 ```
 
-##### 서브젝트 인터페이스
+### 서브젝트 인터페이스
 - 옵저버 관리, 활용에 관한 타입 정의
 ```cs
 public interface I_Subject
@@ -74,7 +74,7 @@ public interface I_Subject
 }
 ```
 
-#####서브젝트
+### 서브젝트
 - 대상 인터페이스를 구현한 클래스
 ```cs
 using System.Collections;
