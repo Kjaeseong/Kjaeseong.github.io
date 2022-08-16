@@ -1,5 +1,5 @@
 ---
-title: "(작성중)__Unity Programming" 
+title: "(작성중)Unity Programming" 
 
 categories:
   - UnityStudy
@@ -306,3 +306,27 @@ public static class Extensions
 ## 제네릭(Generic)
 - 일반화(C++의 템플릿)
 - [사용 방법](http://www.csharpstudy.com/CSharp/CSharp-generics.aspx)
+- 사용예제 추가예정.
+
+### 제약 조건
+- 전달될 수 있는 타입 인자에 조건을 달 수 있다.
+  - 타입에 안전한 코드 작성 가능
+  - [참고링크](https://docs.microsoft.com/ko-kr/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters#why-use-constraints)
+
+## 컬렉션
+- 자료구조(C++ : C#)
+  - unordered_map : Dictionary
+  - unordered_set : HashSet
+  - list : LinkedList
+  - vector : List
+  - priority_queue : PriorityQueue
+  - queue : Queue
+  - map : SortedDictionary
+  - set : SortedSet
+  - stack : Stack
+
+## 수학 라이브러리
+- Unity에서 [Mathf](https://docs.unity3d.com/ScriptReference/Mathf.html) 클래스 제공
+
+## 시간 라이브러리
+- Unity에서 [Time](https://docs.unity3d.com/ScriptReference/Time.html) 클래스 제공
