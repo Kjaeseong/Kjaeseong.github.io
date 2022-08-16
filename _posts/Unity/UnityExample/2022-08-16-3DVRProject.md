@@ -57,9 +57,14 @@ last_modified_at: 2022-08-16
 ### Stage Clear 조건
 - 자물쇠를 풀고 Map 밖으로 이동
 
-## [GitHub Repositories] - 아직 생성하지 않았음. 생성시 링크 첨부 예정
+## [GitHub Repositories](https://github.com/Kjaeseong/-22.08_3D-VR-Project)
 
 ## 일자별 작업/예정 사항
-- 미정
+- 2022.08.16
+  - 예정사항 : 플레이어 이동 및 FPS 시점/이동/회전 구현(가능하다면 이동까지)
+  - 완료사항 :
+- 2022.08.17
+  - 예정사항 : 
+  - 완료사항 :
 
 # 지도교수님 컨펌 / 피드백 후 수정 예정
