@@ -115,3 +115,53 @@ arr[1][2];
 ## 함수
 - C++의 문법과 동일하며, 기본 인자와 오버로딩도 가능
 
+## 간접 참조
+- 높은 가독성을 위해 여러 문법 지원.
+- 매개변수 한정자(Parameter Specifier)라고 한다.
+  
+### ref
+- 인자가 반드시 초기화 되어 있어야 한다.
+  - 초기화하지 않으면 컴파일오류 발생
+
+```cs
+// C++
+void Swap(int& a, int& b)
+{
+  int temp = a;
+  a = b;
+  b = temp;
+}
+
+// C#
+void Swap(ref int a, ref int b)
+{
+  int temp = a;
+  a = b;
+  b = temp;
+}
+
+int a = 10;
+int b = 20;
+
+// 호출시 꼭 ref 키워드를 적는다.
+Swap(ref a, ref b); 
+```
+
+### in
+- 인자가 반드시 초기화 되어 있어야 한다.
+  - 초기화하지 않으면 컴파일오류 발생
+
+```cs
+// C++
+void Foo(const int& a, const int& b)
+{
+  // ...
+}
+
+// C#
+void Foo(in int a, in int b)
+{
+ // ...
+}
+```
+
