@@ -165,3 +165,144 @@ void Foo(in int a, in int b)
 }
 ```
 
+### out
+- 함수가 끝나기 전 반드시 값이 할당되어야 한다.
+- 호출시 반드시 out 키워드를 적는다.
+
+```cs
+// C++
+void Foo(int a, int b, int& result)
+{
+  result = a + b;
+}
+
+// C#
+void Foo(int a, int b, out int result)
+{
+  result = a + b;
+}
+
+int r;
+Foo(10, 20, out r);
+```
+
+## 클래스
+- C++과 동일하게 필드와 메서드를 가지지만 문법이 다르다.
+- 접근 한정자를 매번 적어야 한다.
+  - [한정자의 종류](https://docs.microsoft.com/ko-kr/dotnet/csharp/language-reference/keywords/accessibility-levels)가 다르다.
+
+```cs
+public class Temp
+{
+  private int a = 0;
+  private int b = 0;
+  public Temp() => Debug.Log("기본 생성자");
+  
+  // 초기자 리스트가 없다.
+  public Temp(int a, int b)
+  {
+    // C#에는 포인터라는 게 없어서 -> 연산자는 없다.
+    this.a = a;
+    this.b = b;
+  }
+  
+  // 복사 생성자는 매우 드물게 작성한다.
+  public Temp(Temp temp)
+  {
+    a = temp.a;
+    b = temp.b;
+    // 얕은 복사인 경우 아래와 같은 메서드를 이용할 수 있다.
+    // this = temp.MemberwiseClone();
+  }
+  
+  public void Print() => Debug.Log($"{a}, {b}");
+}
+
+Temp temp = new Temp(1, 2);
+```
+
+## 속성(Property)
+- 필드의 확장 버전
+- 더 적은 코드로 필드와 관련된 메서드 작성 가능
+- [자세한 정보](https://docs.microsoft.com/ko-kr/dotnet/csharp/properties)
+
+```cs
+class Person
+{
+  //외부에서 FirstName 필드 데이터 읽기(get), 쓰기(set) 가능
+  public string FirstName { get; set; }
+
+  //외부에서 SecondName 필드 데이터 읽기(get) 가능, 쓰기(set) 불가능
+  public string SecondName { get; private set; }
+
+  public string FullName
+  {
+    get { return $"{FirstName} + {SecondName}"; }
+  }
+}
+```
+
+## 상속과 다형성
+- 방식은 비슷하지만 접근 한정자를 쓰지 않아도 된다.
+- C#에서는 다중 상속을 지원하지 않는다.
+
+```cs
+class Base
+{
+};
+
+// C++
+class Derived : public Base
+{
+};
+
+// C#
+class Derived : Base
+{
+}
+```
+
+## 확장 메서드(Extension Method)
+- [확장 메서드](https://docs.microsoft.com/ko-kr/dotnet/csharp/programming-guide/classes-and-structs/extension-methods)는 기존 타입을 수정하지 않고 메서드를 추가할 수 있다.
+  - [사용 예제](http://www.csharpstudy.com/CSharp/CSharp-extension-method.aspx)
+- 아래는 Unity엔진에서 문자열 사용시 좀 더 성능이 좋은 커스터마이징 버전의 메서드다.
+  - [EndsWith()](https://docs.microsoft.com/ko-kr/dotnet/api/system.string.endswith?view=netstandard-2.0) : 문자열 인스턴의 끝 부분과 지정한 문자열이 일치하는지 확인
+  - [StartsWith()](https://docs.microsoft.com/ko-kr/dotnet/api/system.string.startswith?view=netstandard-2.0) : 문자열 인스턴스의 시작 부분과 지정한 문자열이 일치하는지 확인
+
+```cs
+public static class Extensions
+{
+  public static bool CustomEndsWith(this string a, string b)
+  {
+    int ap = a.Length - 1;
+    int bp = b.Length - 1;
+
+    while (ap >= 0 && bp >= 0 && a [ap] == b [bp])
+    {
+      ap--;
+      bp--;
+    }
+
+    return (bp < 0);
+  }
+
+  public static bool CustomStartsWith(this string a, string b)
+  {
+    int aLen = a.Length;
+    int bLen = b.Length;
+    int ap = 0; int bp = 0;
+    
+    while (ap < aLen && bp < bLen && a [ap] == b [bp])
+    {
+      ap++;
+      bp++;
+    }
+
+    return (bp == bLen);
+  }
+}
+```
+
+## 제네릭(Generic)
+- 일반화(C++의 템플릿)
+- [사용 방법](http://www.csharpstudy.com/CSharp/CSharp-generics.aspx)
