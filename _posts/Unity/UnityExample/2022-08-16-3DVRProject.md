@@ -1,5 +1,5 @@
 ---
-title: "(작성중)3D / VR 개인 프로젝트 기획안" 
+title: "(초안)3D / VR 개인 프로젝트 기획안" 
 
 categories:
   - UnityExample
