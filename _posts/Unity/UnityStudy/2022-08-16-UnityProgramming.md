@@ -45,4 +45,73 @@ string s = $"숫자는 {num}입니다";
 - C, C++과 같은 산술 연산자 제공
 - 비트 연산 지원
 - 제어문 비교 연산 지원(모두 bool 타입)
-- 
+
+## 분기문
+
+### if
+- C, C++과 사용방법 동일
+
+### switch
+- 문자, 문자열 사용 가능
+
+```cs
+int num = 2;
+
+switch(num)
+{
+  case 2: case 4: case 6: case 8: case 10:
+    Debug.Log("짝수");
+    break;
+
+  default:
+    Debug.Log("홀수");
+    break;
+}
+```
+
+## 반복문
+- C, C++과 마찬가지로 whlie, do-while, for, break, continue문 지원
+
+## 배열
+- C++보다 [더 많은 기능](https://docs.microsoft.com/ko-kr/dotnet/api/system.array?view=netstandard-2.0) 지원
+- C++과는 선언 방식이 다르다.
+  - 주의 : C# 가변 배열의 접근 방식과 C++의 다차원 배열 접근 코드가 동일하다. 
+
+```cs
+// 1차원 배열 선언
+// C++ : int arr[5]
+int[] arr = new int[5];
+
+// 초기화
+arr = new int[5] { 1, 2, 3, 4, 5 };
+arr = { 1, 2, 3, 4, 5 };
+
+// 원소 접근
+arr[1];
+
+// 다차원 배열
+// C++ : int arr[5][5]
+int[,] arr2 = new int[5, 5];
+
+// 초기화
+arr2 = new int[5, 5] { { 1, 2, 3 }, { 4, 5, 6 }};
+arr2 = { { 1, 2, 3 }, { 4, 5, 6 } };
+
+// 원소 접근
+// C++ : arr2[1][2]
+arr2[1, 2];
+
+// 가변 배열 : 배열의 배열
+int[][] arr3 = new int[3][];
+
+arr3[0] = new int[2] { 1, 2 };
+arr3[1] = new int[4] { 1, 2, 3, 4 };
+arr3[2] = new int[3] { 1, 2, 3 };
+
+// 원소 접근
+arr[1][2];
+```
+
+## 함수
+- C++의 문법과 동일하며, 기본 인자와 오버로딩도 가능
+
