@@ -116,6 +116,7 @@ last_modified_at: 2022-08-19
     - 체력바
     - 배터리
     - 인벤토리
+    - ESC키 클릭시 계속하기 / 재시작 / 메인화면 선택창
   - Game Over
   - Stage Clear
 - 타이틀 씬(게임시작/종료)
