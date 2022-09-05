@@ -107,4 +107,10 @@ last_modified_at: 2022-09-05
 ## 일자별 작업/예정 사항
 - 작업 시작시 기재 예정
 
+# 참고 링크
+
 ## [GitHub Repository Link](https://github.com/Kjaeseong/2209_SmallRacingProject)
+
+## [Kart Asset](https://assetstore.unity.com/packages/3d/kart-skins-karting-microgame-add-ons-174460)
+
+## [Track / Map Asset](https://assetstore.unity.com/packages/3d/environments/roadways/modular-lowpoly-track-roads-free-205188)
