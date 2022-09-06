@@ -62,8 +62,8 @@
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "UnityExample" %}
-                        <li><a href="/categories/unityexample" class="">Unity Example ({{category[1].size}})</a></li>
+                    {% if category[0] == "UnityProject" %}
+                        <li><a href="/categories/unityproject" class="">Unity Project ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
