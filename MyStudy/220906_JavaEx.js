@@ -1,5 +1,4 @@
-const Human = {name: 'kim', age: '20'};
-
-Human.age = 31;
-
-console.log(Human);
+var c = 3;
+var d = 4;
+var Text2 = `${c} 더하기 ${d} 는 ${c + d}`;
+console.log(Text2);
