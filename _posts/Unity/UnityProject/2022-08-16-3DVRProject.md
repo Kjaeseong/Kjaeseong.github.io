@@ -2,7 +2,7 @@
 title: "(변경사항 상시 적용)3D / VR 개인 프로젝트 기획안" 
 
 categories:
-  - UnityExample
+  - UnityProject
 
 toc: true
 toc_sticky: true
