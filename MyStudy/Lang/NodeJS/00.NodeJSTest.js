@@ -8,4 +8,8 @@ const basket = {
     return this.status.count;
   },
 };
-const { getFruit, status: { count } } = basket;
+var getFruit = basket.getFruit;
+var count = basket.status.count;
+
+//const { getFruit, status: { count } } = basket;
+console.log(this);
