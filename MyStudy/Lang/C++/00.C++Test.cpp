@@ -3,11 +3,15 @@ using namespace std;
 
 int main()
 {
-    int n;
-    cin >> n;
+    int testcase;
+    cin >> testcase;
 
-    for(int i = 1; i <= 9; i++)
+    for(int i = 0; i < testcase; i++)
     {
-        cout << n << " * " << i << " = " << n * i << endl;
+        int a, b;
+        cin >> a;
+        cin >> b;
+
+        cout << a + b << endl;
     }
 }
