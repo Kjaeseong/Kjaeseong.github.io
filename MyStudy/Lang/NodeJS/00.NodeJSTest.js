@@ -1,10 +1,11 @@
-const relationship2 = {
-  name: 'zero',
-  friends: ['nero', 'hero', 'xero'],
-  logFriends() {
-    this.friends.forEach(friend => {
-      console.log(this.name, friend);
-    });
+const basket = {
+  status: {
+    name: 'apple',
+    count: 5,
+  },
+  getFruit() {
+    this.status.count--;
+    return this.status.count;
   },
 };
-relationship2.logFriends();
+const { getFruit, status: { count } } = basket;
