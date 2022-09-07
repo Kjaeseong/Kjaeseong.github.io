@@ -1,5 +1,5 @@
 ---
-title: "(작성중)게임 서버에 대한 이해" 
+title: "게임 서버에 대한 이해" 
 
 categories:
   - Network
