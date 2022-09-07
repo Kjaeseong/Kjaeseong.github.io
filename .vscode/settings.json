@@ -5,5 +5,8 @@
             "strings": "on",
             "other": "on"
         }
+    },
+    "files.associations": {
+        "vector": "cpp"
     }
 }
