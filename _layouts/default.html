@@ -36,7 +36,10 @@ classes: wide
       {
           width:12px;height:12px;background:transparent;}
       }  
-
+      
+      {% if page.use_math %}
+	      {% include mathjax_support.html %}
+      {% endif %}
       
     </style>
   </head>
