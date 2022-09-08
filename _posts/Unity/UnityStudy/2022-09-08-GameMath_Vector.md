@@ -6,6 +6,7 @@ categories:
 
 toc: true
 toc_sticky: true
+use_math: true
 
 date: 2022-09-08
 last_modified_at: 2022-09-08
