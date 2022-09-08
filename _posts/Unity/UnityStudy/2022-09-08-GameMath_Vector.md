@@ -12,24 +12,13 @@ use_math: true
 date: 2022-09-08
 last_modified_at: 2022-09-08
 ---
-[벡터00]: ./img/220908_vector00.png
-[벡터01]: ./img/220908_vector01.png
-[벡터02]: ./img/220908_vector02.png
-[벡터03]: ./img/220908_vector03.png
-[벡터04]: ./img/220908_vector04.png
-[벡터05]: ./img/220908_vector05.png
-[벡터06]: ./img/220908_vector06.png
-[벡터07]: ./img/220908_vector07.png
-[벡터08]: ./img/220908_vector08.png
-[벡터09]: ./img/220908_vector09.png
-[벡터10]: ./img/220908_vector10.png
 
 
 
 # 게임 기초 수학
 
 ## 공간의 벡터
-![이미지1][벡터00]
+![00](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/220908_vector00.png?raw=true)
 - 벡터 : 
   - 기하학적으로 바향을 가진 선분으로 표현
   - 길이, 가리키는 방향(크기와 놈(norm)으로도 불린다)을 가진다.
@@ -47,7 +36,7 @@ last_modified_at: 2022-09-08
   - 3차원 : $n = (n_x, n_y, n_z)$
   - 4차원 : $c = (cx, cy, cz, \sqrt a+cw)$
   
-![이미지2][벡터01]
+![01](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/220908_vector01.png?raw=true)
 - 왼손 좌표계는 왼쪽, 오른손 좌표계는 오른쪽 기준
 
 
