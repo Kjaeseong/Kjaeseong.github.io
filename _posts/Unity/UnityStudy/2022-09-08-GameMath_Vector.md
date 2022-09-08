@@ -69,7 +69,7 @@ last_modified_at: 2022-09-08
   - Ex1> 예시
     $\hat u = \frac {u}{||u||} = (\frac {u_x}{||u||}. \frac {u_y}{||u||}, \frac {u_z}{||u||})$
   - Ex2><br/>문제 : $u = (1, 2, 3)$ 과 $v = (1, 1)$ 벡터를 정규화하라.
-    - 답 : <br/>방정식에서 $||y|| = \sqrt {14}$ 와 $||v|| = \sqrt 2$를 얻는다. 따라서, <br/>$\hat u = \frac {u}{\sqrt {14}} = (\frac {1}{\sqrt {14}}, \frac {2}{\sqrt {14}}, \frac {3}{\sqrt {14}})$<br/>$\hat v = \frac {v}{\sqrt 2} = (\frac {1}{\sqrt 2}, \frac {1}{\sqrt 2})$
+    - 답 : <br/>방정식에서 $||y|| = \sqrt {14}$ 와 $||v|| = \sqrt 2$ 를 얻는다. 따라서, <br/>$\hat u = \frac {u}{\sqrt {14}} = (\frac {1}{\sqrt {14}}, \frac {2}{\sqrt {14}}, \frac {3}{\sqrt {14}})$<br/>$\hat v = \frac {v}{\sqrt 2} = (\frac {1}{\sqrt 2}, \frac {1}{\sqrt 2})$
 
 ### 벡터 더하기
 - ![03](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/220908_vector03.png?raw=true)
