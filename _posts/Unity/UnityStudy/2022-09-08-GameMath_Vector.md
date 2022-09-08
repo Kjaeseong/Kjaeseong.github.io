@@ -6,16 +6,20 @@ categories:
 
 toc: true
 toc_sticky: true
+
 use_math: true
 
 date: 2022-09-08
 last_modified_at: 2022-09-08
 ---
+[벡터00]: ./img/220908_vector00.png
+
+
 
 # 게임 기초 수학
 
 ## 공간의 벡터
-![이미지1](./img/220908_vector00.png)
+![이미지1][벡터00]
 - 벡터 : 
   - 기하학적으로 바향을 가진 선분으로 표현
   - 길이, 가리키는 방향(크기와 놈(norm)으로도 불린다)을 가진다.
