@@ -52,7 +52,7 @@ last_modified_at: 2022-09-08
   - 좌표 시스템의 $x-$, $y-$, $z-$ 축을 따라 진행. 모두 1의 크기를 가진다.
   - 크기가 1인 벡터이므로, 단위벡터로 부르기도 한다.
   
-![03]() - 이미지 링크 기재 @@@@@
+![02](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/220908_vector02.png?raw=true)
 
 ### 벡터 상등
 - 대수적으로 벡터가 동일한 차원이고 대응되는 성분이 같은 경우 동일한 것으로 본다.
@@ -77,7 +77,7 @@ last_modified_at: 2022-09-08
 - 대응되는 성분을 더하면 두 벡터를 더할 수 있다
 - 반드시 동일한 차원을 가져야 한다.
 - Ex> $u + v = (u_x + v_x , u_y + v_y, u_z + v_z)$
-- ![04]() - 이미지넣쥬!
+- ![04](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/220908_vector03.png?raw=true)
   - 순서를 다르게 해도 값은 동일하다.
 
 ### 벡터 빼기
