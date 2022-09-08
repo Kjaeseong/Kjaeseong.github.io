@@ -13,6 +13,16 @@ date: 2022-09-08
 last_modified_at: 2022-09-08
 ---
 [벡터00]: ./img/220908_vector00.png
+[벡터01]: ./img/220908_vector01.png
+[벡터02]: ./img/220908_vector02.png
+[벡터03]: ./img/220908_vector03.png
+[벡터04]: ./img/220908_vector04.png
+[벡터05]: ./img/220908_vector05.png
+[벡터06]: ./img/220908_vector06.png
+[벡터07]: ./img/220908_vector07.png
+[벡터08]: ./img/220908_vector08.png
+[벡터09]: ./img/220908_vector09.png
+[벡터10]: ./img/220908_vector10.png
 
 
 
@@ -37,7 +47,7 @@ last_modified_at: 2022-09-08
   - 3차원 : $n = (n_x, n_y, n_z)$
   - 4차원 : $c = (cx, cy, cz, \sqrt a+cw)$
   
-![이미지2](./img/220908_vector01.png)
+![이미지2][벡터01]
 - 왼손 좌표계는 왼쪽, 오른손 좌표계는 오른쪽 기준
 
 
