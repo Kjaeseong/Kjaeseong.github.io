@@ -13,8 +13,6 @@ date: 2022-09-08
 last_modified_at: 2022-09-08
 ---
 
-
-
 # 게임기초수학_벡터
 
 ## 공간의 벡터
@@ -114,7 +112,7 @@ last_modified_at: 2022-09-08
   - $p_x = (u_yv_z - u_zv_y)$
   - $p_y = (u_zv_x - u_xv_z)$
   - $p_z = (u_xv_y - u_yv_x)$
-- ![05]()
+- ![05](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/220908_vector05.png?raw=true)
   - 수식 순서에 따라 그래프 방향이 달라질 수 있다.
   - 외적이 교환적이지 않다.
   - 왼손 / 오른손 규칙에 따라 각 손의 좌표시스템으로 이용해야 한다.
