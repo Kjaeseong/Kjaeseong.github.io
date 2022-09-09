@@ -27,7 +27,11 @@ last_modified_at: 2022-09-08
   - u = $\begin{pmatrix} u_x \\ u_y \\ u_z \end{pmatrix}$
 
 ### 상등, 스칼라 곱, 더하기
-
+$A = \begin{pmatrix} 1 & 5 \\ -2 & 3 \end{pmatrix}$   $B = \begin{pmatrix} 6 & 2 \\ 5 & -8 \end{pmatrix}$<br/>$C = \begin{pmatrix} 1 & 5 \\ -2 & 3 \end{pmatrix}$ $D = \begin{pmatrix} 1 & 2 & -1 & 3 \\ -6 & 3 & 0 & 0 \end{pmatrix}$
+- 동일한 차원을 가지고, 각 대응 항목이 같은 두 행렬은 같다
+  - Ex> $A = C$, $A \ne B$ , $A \ne D$
+  - 행렬의 각 항목을 스칼라로 곱하는 방법으로 행렬을 스칼라로 곱할 수 있다.
+    - $k = 2$일 때,<br/>$kD = \begin{pmatrix} k1 & k2 & k-1 & k3 \\ k-6 & k3 k& k0 & k0 \end{pmatrix} = \begin{pmatrix} 2 & 4 & -2 & 6 \\ -12 & 6 & 0 & 0 \end{pmatrix}$
 
 ### 곱
 - 3D 컴퓨터 그래픽에서 행렬을 이용하기 위한 가장 중요한 연산
