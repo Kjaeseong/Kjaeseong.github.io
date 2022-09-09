@@ -29,7 +29,7 @@ last_modified_at: 2022-09-08
   - U = $\begin{bmatrix} u_x \\ u_y \\ u_z \end{bmatrix}$
 
 ### 상등, 스칼라 곱, 더하기
-$A = \begin{bmatrix} 1 & 5 \\ -2 & 3 \end{bmatrix}$   $B = \begin{bmatrix} 6 & 2 \\ 5 & -8 \end{bmatrix}$<br/><br/>$C = \begin{bmatrix} 1 & 5 \\ -2 & 3 \end{bmatrix}$ $D = \begin{bmatrix} 1 & 2 & -1 & 3 \\ -6 & 3 & 0 & 0 \end{bmatrix}$
+$A = \begin{bmatrix} 1 & 5 \\\\ -2 & 3 \end{bmatrix}$   $B = \begin{bmatrix} 6 & 2 \\ 5 & -8 \end{bmatrix}$<br/><br/>$C = \begin{bmatrix} 1 & 5 \\ -2 & 3 \end{bmatrix}$ $D = \begin{bmatrix} 1 & 2 & -1 & 3 \\ -6 & 3 & 0 & 0 \end{bmatrix}$
 - 동일한 차원을 가지고, 각 대응 항목이 같은 두 행렬은 같다
   - Ex> $A = C$, $A \ne B$ , $A \ne D$
  - 행렬의 각 항목을 스칼라로 곱하는 방법으로 행렬을 스칼라로 곱할 수 있다.
