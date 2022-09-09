@@ -7,6 +7,8 @@ categories:
 toc: true
 toc_sticky: true
 
+use_math: true
+
 date: 2022-09-08
 last_modified_at: 2022-09-08
 ---
@@ -22,9 +24,9 @@ last_modified_at: 2022-09-08
   - 2 * 4 행렬 <br/>$B = \begin{bmatrix} b_{11} & b_{12} & b_{13} & b_{14} \\  b_{21} & b_{22} & b_{23} & b_{24}  \end{bmatrix}$<br/>
   - 3 * 2 행렬 <br/>$C = \begin{bmatrix} c_{11} & c_{12} \\ c_{21} & c_{22} \\ c_{31} & c_{32} \end{bmatrix}$
 - 행 벡터 : 한 개의 행을 가지는 행렬
-  - v = $\begin{bmatrix} v_1 & v_2 & v_3 & v_4 \end{bmatrix}$
+  - V = $\begin{bmatrix} v_1 & v_2 & v_3 & v_4 \end{bmatrix}$
 - 열 벡터 : 한 개의 열을 가지는 행렬
-  - u = $\begin{bmatrix} u_x \\ u_y \\ u_z \end{bmatrix}$
+  - U = $\begin{bmatrix} u_x \\ u_y \\ u_z \end{bmatrix}$
 
 ### 상등, 스칼라 곱, 더하기
 $A = \begin{bmatrix} 1 & 5 \\ -2 & 3 \end{bmatrix}$   $B = \begin{bmatrix} 6 & 2 \\ 5 & -8 \end{bmatrix}$<br/><br/>$C = \begin{bmatrix} 1 & 5 \\ -2 & 3 \end{bmatrix}$ $D = \begin{bmatrix} 1 & 2 & -1 & 3 \\ -6 & 3 & 0 & 0 \end{bmatrix}$
