@@ -49,7 +49,7 @@ $A = \begin{bmatrix} 1 & 5 \\\\ -2 & 3 \end{bmatrix}$   $B = \begin{bmatrix} 6 &
 - A * B와 B * A의 결과는 다르다.
 - Ex> <br/> $A = \begin{bmatrix} 1 & 2 & 3 \\\\ 4 & 5 & 6 \end{bmatrix} B = \begin{bmatrix}  1 & 2 & 3\\\\ 4 & 5 & 6 \\\\ 7 & 8 & 9 \end{bmatrix}$ <br/>
   - $A + B$ <br/> 
-  $= \begin{bmatrix} (1*1)+(2*4)+(3*7) & (1*2)+(2*5)+(3*8) & (1*3)+(2*6)+(3*9) \\\\ (4*1)+(5*4)+(6*7) & (4*2)+(5*5)+(6*8) & (4*3)+(5*6)+(6*9) \end{bmatrix}$ <br/>
+  $= \begin{bmatrix} (1\times1)+(2\times4)+(3\times7) & (1\times2)+(2\times5)+(3\times8) & (1\times3)+(2\times6)+(3\times9) \\\\ (4\times1)+(5\times4)+(6\times7) & (4\times2)+(5\times5)+(6\times8) & (4\times3)+(5\times6)+(6\times9) \end{bmatrix}$ <br/>
   $= \begin{bmatrix} 30 & 36 & 42 \\\\ 66 & 81 & 96 \end{bmatrix}$
 
 ## 항등 행렬
