@@ -29,16 +29,16 @@ last_modified_at: 2022-09-08
   - U = $\begin{bmatrix} u_x \\\\ u_y \\\\ u_z \end{bmatrix}$
 
 ### 상등, 스칼라 곱, 더하기
-$A = \begin{bmatrix} 1 & 5 \\\\ -2 & 3 \end{bmatrix}$   $B = \begin{bmatrix} 6 & 2 \\ 5 & -8 \end{bmatrix}$<br/><br/>$C = \begin{bmatrix} 1 & 5 \\ -2 & 3 \end{bmatrix}$ $D = \begin{bmatrix} 1 & 2 & -1 & 3 \\ -6 & 3 & 0 & 0 \end{bmatrix}$
+$A = \begin{bmatrix} 1 & 5 \\\\ -2 & 3 \end{bmatrix}$   $B = \begin{bmatrix} 6 & 2 \\\\ 5 & -8 \end{bmatrix}$<br/><br/>$C = \begin{bmatrix} 1 & 5 \\\\ -2 & 3 \end{bmatrix}$ $D = \begin{bmatrix} 1 & 2 & -1 & 3 \\\\ -6 & 3 & 0 & 0 \end{bmatrix}$
 - 동일한 차원을 가지고, 각 대응 항목이 같은 두 행렬은 같다
   - Ex> $A = C$, $A \ne B$ , $A \ne D$
  - 행렬의 각 항목을 스칼라로 곱하는 방법으로 행렬을 스칼라로 곱할 수 있다.
-  - Ex> $k = 2$일 때,<br/>$kD = \begin{bmatrix} k(1) & k(2) & k(-1) & k(3) \\ k(-6) & k(3) & k(0) & k(0) \end{bmatrix} = \begin{bmatrix} 2 & 4 & -2 & 6 \\ -12 & 6 & 0 & 0 \end{bmatrix}$
+  - Ex> $k = 2$일 때,<br/>$kD = \begin{bmatrix} k(1) & k(2) & k(-1) & k(3) \\\\ k(-6) & k(3) & k(0) & k(0) \end{bmatrix} = \begin{bmatrix} 2 & 4 & -2 & 6 \\\\ -12 & 6 & 0 & 0 \end{bmatrix}$
 - 행렬이 동일한 차원을 가지는 경우 더할 수 있다.
   - 각 행렬의 동일한 항목을 더한다.
-  - Ex><br/>$A + B = \begin{bmatrix} 1 & 5 \\ -2 & 3 \end{bmatrix} + \begin{bmatrix} 6 & 2 \\ 5 & -8 \end{bmatrix} = \begin{bmatrix} 6 & 7 \\ 3 & -5 \end{bmatrix}$
+  - Ex><br/>$A + B = \begin{bmatrix} 1 & 5 \\\\ -2 & 3 \end{bmatrix} + \begin{bmatrix} 6 & 2 \\\\ 5 & -8 \end{bmatrix} = \begin{bmatrix} 6 & 7 \\\\ 3 & -5 \end{bmatrix}$
 - 행렬이 동일한 차원을 가지는 경우 뺄 수 있다.
-  - Ex><br/>$A - B = A + (-B) = \begin{bmatrix} 1 & 5 \\ -2 & 3 \end{bmatrix} - \begin{bmatrix} 6 & 2 \\ 5 & -8 \end{bmatrix} = \begin{bmatrix} -5 & 3 \\ -7 & -11 \end{bmatrix}$
+  - Ex><br/>$A - B = A + (-B) = \begin{bmatrix} 1 & 5 \\\\ -2 & 3 \end{bmatrix} - \begin{bmatrix} 6 & 2 \\\\ 5 & -8 \end{bmatrix} = \begin{bmatrix} -5 & 3 \\\\ -7 & -11 \end{bmatrix}$
 
 ### 곱
 - 3D 컴퓨터 그래픽에서 행렬을 이용하기 위한 가장 중요한 연산
