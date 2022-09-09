@@ -17,8 +17,14 @@ last_modified_at: 2022-09-08
 - $m*n$ 행렬은 $m$행과 $n$열을 가지는 일반적인 수 배열
 - 행과 열의 수는 행렬의 차원을 결정
 - 첫 번째 아래첨자는 행, 두번째 아래첨자는 열을 뜻한다.
+- 일반적으로 굵은 대문자 사용
+  - 3 * 3 행렬 $M$ = $\begin{pmatrix} m_{11} & m_{12} & m_{13} \\ m_{21} & m_{22} & m_{23} \\ m_{31} & m_{32} & m_{33} \end{pmatrix}$
+  - 2 * 4 행렬 $B$ = $\begin{pmatrix} b_{11} & b_{12} & b_{13} & b_{14} \\  b_{21} & b_{22} & b_{23} & b_{24}  \end{pmatrix}$
+  - 3 * 2 행렬 $C$ = $\begin{pmatrix} c_{11} & c_{12} \\ c_{21} & c_{22} \\ c_{31} & c_{32} \end{pmatrix}$
 - 행 벡터 : 한 개의 행을 가지는 행렬
+  - v = $\begin{pmatrix} v_1 & v_2 & v_3 & v_4 \end{pmatrix}$
 - 열 벡터 : 한 개의 열을 가지는 행렬
+  - u = $\begin{pmatrix} u_x \\ u_y \\ u_z \end{pmatrix}$
 
 ### 상등, 스칼라 곱, 더하기
 
