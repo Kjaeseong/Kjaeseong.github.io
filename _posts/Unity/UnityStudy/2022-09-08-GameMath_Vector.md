@@ -1,5 +1,5 @@
 ---
-title: "(작성중)게임기초수학_벡터" 
+title: "게임기초수학_벡터" 
 
 categories:
   - UnityStudy
@@ -60,17 +60,17 @@ last_modified_at: 2022-09-08
 - 기하학적으로 벡터의 크기는 방향을 가진 선분의 길이
 - 벡터의 성분이 주어졌다면, 크기를 대수학적으로 계산할 수 있다.
   - Ex><br/>
-  문제 : $u = (1, 2, 3)$과 $v = (1, 1)$ 벡터의 크기를 구하라.<br/>$││u││ = \sqrt {u_x^2 + u_y^2 + u_z^2} $<br/>
-  답 : <br/>$││u││ = \sqrt {1^2+2^2+3^2} = \sqrt {1+4+9} = \sqrt {14}$<br/>$││v││ = \sqrt {1^2+1^2} = \sqrt 2$<br/>
+  문제 : $u = (1, 2, 3)$과 $v = (1, 1)$ 벡터의 크기를 구하라.<br/>$ \parallel u \parallel = \sqrt {u_x^2 + u_y^2 + u_z^2} $<br/>
+  답 : <br/>$ \parallel u \parallel  = \sqrt {1^2+2^2+3^2} = \sqrt {1+4+9} = \sqrt {14}$<br/>$ \parallel v \parallel  = \sqrt {1^2+1^2} = \sqrt 2$<br/>
 
 ### 벡터의 정규화
 - 벡터의 크기를 1로 만들어 단위 벡터가 되도록 한다.
 - 벡터의 각 성분을 벡터의 크기로 나누면 정규화된다.
   - Ex1> 예시
-    $\hat u = \frac {u}{││u││} = (\frac {u_x}{││u││}. \frac {u_y}{││u││}, \frac {u_z}{││u││})$
+    $\hat u = \frac {u}{ \parallel u \parallel } = (\frac {u_x}{ \parallel u \parallel }. \frac {u_y}{ \parallel u \parallel }, \frac {u_z}{ \parallel u \parallel })$
   - Ex2><br/>문제 : $u = (1, 2, 3)$ 과 $v = (1, 1)$ 벡터를 정규화하라.
     - 답 : 
-    <br/> 방정식에서 $││y││ = \sqrt {14}$ 와 $││v││ = \sqrt 2$ 를 얻는다. 따라서, 
+    <br/> 방정식에서 $ \parallel y \parallel  = \sqrt {14}$ 와 $ \parallel v \parallel  = \sqrt 2$ 를 얻는다. 따라서, 
     <br/> $\hat u = \frac {u}{\sqrt {14}} = (\frac {1}{\sqrt {14}}, \frac {2}{\sqrt {14}}, \frac {3}{\sqrt {14}})$ 
     <br/> $\hat v = \frac {v}{\sqrt 2} = (\frac {1}{\sqrt 2}, \frac {1}{\sqrt 2})$
 
@@ -98,7 +98,7 @@ last_modified_at: 2022-09-08
 
 ### 내적
 - 벡터 수학에서 정의하는 두 가지 곱셈 중 하나.  <br/> u * v = $u_xv_x + u_yv_y + u_zv_z = s$ <br/>
-- 코사인의 법칙을 이용하면 u * v = $││$ u $││││$ v $││$ 의 관계를 발견할 수 있다.
+- 코사인의 법칙을 이용하면 u * v = $ \parallel $ u $ \parallel  \parallel $ v $ \parallel $ 의 관계를 발견할 수 있다.
 - 두 벡터 간의 내적이 벡터 크기배율을 가진 벡터 간 각도의 코사인이다.
   - u와 v가 모두 단위 벡터일 경우 u * v는 두 벡터 간 각도의 코사인이 된다.
 - 내적의 몇가지 특징
@@ -120,6 +120,7 @@ last_modified_at: 2022-09-08
   - 외적이 교환적이지 않다.
   - 왼손 / 오른손 규칙에 따라 각 손의 좌표시스템으로 이용해야 한다.
   - 손 좌표시스템 참고자료
+
 
 # 참고도서
 - Frank D. Luna저 / 정보문화사 : DirectX 9를 이용한 3D Game 프로그래밍 입문
