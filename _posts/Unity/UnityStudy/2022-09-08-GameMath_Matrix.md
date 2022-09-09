@@ -18,20 +18,25 @@ last_modified_at: 2022-09-08
 - 행과 열의 수는 행렬의 차원을 결정
 - 첫 번째 아래첨자는 행, 두번째 아래첨자는 열을 뜻한다.
 - 일반적으로 굵은 대문자 사용
-  - 3 * 3 행렬 $M$ = $\begin{pmatrix} m_{11} & m_{12} & m_{13} \\ m_{21} & m_{22} & m_{23} \\ m_{31} & m_{32} & m_{33} \end{pmatrix}$
-  - 2 * 4 행렬 $B$ = $\begin{pmatrix} b_{11} & b_{12} & b_{13} & b_{14} \\  b_{21} & b_{22} & b_{23} & b_{24}  \end{pmatrix}$
-  - 3 * 2 행렬 $C$ = $\begin{pmatrix} c_{11} & c_{12} \\ c_{21} & c_{22} \\ c_{31} & c_{32} \end{pmatrix}$
+  - 3 * 3 행렬 $M$ = $\begin{bmatrix} m_{11} & m_{12} & m_{13} \\ m_{21} & m_{22} & m_{23} \\ m_{31} & m_{32} & m_{33} \end{bmatrix}$<br/>
+  - 2 * 4 행렬 $B$ = $\begin{bmatrix} b_{11} & b_{12} & b_{13} & b_{14} \\  b_{21} & b_{22} & b_{23} & b_{24}  \end{bmatrix}$<br/>
+  - 3 * 2 행렬 $C$ = $\begin{bmatrix} c_{11} & c_{12} \\ c_{21} & c_{22} \\ c_{31} & c_{32} \end{bmatrix}$
 - 행 벡터 : 한 개의 행을 가지는 행렬
-  - v = $\begin{pmatrix} v_1 & v_2 & v_3 & v_4 \end{pmatrix}$
+  - v = $\begin{bmatrix} v_1 & v_2 & v_3 & v_4 \end{bmatrix}$
 - 열 벡터 : 한 개의 열을 가지는 행렬
-  - u = $\begin{pmatrix} u_x \\ u_y \\ u_z \end{pmatrix}$
+  - u = $\begin{bmatrix} u_x \\ u_y \\ u_z \end{bmatrix}$
 
 ### 상등, 스칼라 곱, 더하기
-$A = \begin{pmatrix} 1 & 5 \\ -2 & 3 \end{pmatrix}$   $B = \begin{pmatrix} 6 & 2 \\ 5 & -8 \end{pmatrix}$<br/>$C = \begin{pmatrix} 1 & 5 \\ -2 & 3 \end{pmatrix}$ $D = \begin{pmatrix} 1 & 2 & -1 & 3 \\ -6 & 3 & 0 & 0 \end{pmatrix}$
+$A = \begin{bmatrix} 1 & 5 \\ -2 & 3 \end{bmatrix}$   $B = \begin{bmatrix} 6 & 2 \\ 5 & -8 \end{bmatrix}$<br/><br/>$C = \begin{bmatrix} 1 & 5 \\ -2 & 3 \end{bmatrix}$ $D = \begin{bmatrix} 1 & 2 & -1 & 3 \\ -6 & 3 & 0 & 0 \end{bmatrix}$
 - 동일한 차원을 가지고, 각 대응 항목이 같은 두 행렬은 같다
   - Ex> $A = C$, $A \ne B$ , $A \ne D$
-  - 행렬의 각 항목을 스칼라로 곱하는 방법으로 행렬을 스칼라로 곱할 수 있다.
-    - $k = 2$일 때,<br/>$kD = \begin{pmatrix} k1 & k2 & k-1 & k3 \\ k-6 & k3 k& k0 & k0 \end{pmatrix} = \begin{pmatrix} 2 & 4 & -2 & 6 \\ -12 & 6 & 0 & 0 \end{pmatrix}$
+ - 행렬의 각 항목을 스칼라로 곱하는 방법으로 행렬을 스칼라로 곱할 수 있다.
+  - Ex> $k = 2$일 때,<br/>$kD = \begin{bmatrix} k1 & k2 & k-1 & k3 \\ k-6 & k3 k& k0 & k0 \end{bmatrix} = \begin{bmatrix} 2 & 4 & -2 & 6 \\ -12 & 6 & 0 & 0 \end{bmatrix}$
+- 행렬이 동일한 차원을 가지는 경우 더할 수 있다.
+  - 각 행렬의 동일한 항목을 더한다.
+  - Ex><br/>$A + B = \begin{bmatrix} 1 & 5 \\ -2 & 3 \end{bmatrix} + \begin{bmatrix} 6 & 2 \\ 5 & -8 \end{bmatrix} = \begin{bmatrix} 6 & 7 \\ 3 & -5 \end{bmatrix}$
+- 행렬이 동일한 차원을 가지는 경우 뺄 수 있다.
+  - Ex><br/>$A - B = A + (-B) = \begin{bmatrix} 1 & 5 \\ -2 & 3 \end{bmatrix} - \begin{bmatrix} 6 & 2 \\ 5 & -8 \end{bmatrix} = \begin{bmatrix} -5 & 3 \\ -7 & -11 \end{bmatrix}$
 
 ### 곱
 - 3D 컴퓨터 그래픽에서 행렬을 이용하기 위한 가장 중요한 연산
