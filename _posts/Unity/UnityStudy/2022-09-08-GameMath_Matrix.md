@@ -47,9 +47,9 @@ $A = \begin{bmatrix} 1 & 5 \\\\ -2 & 3 \end{bmatrix}$   $B = \begin{bmatrix} 6 &
   - A의 열, B의 행 수가 반드시 같아야 한다.
   - 위 조건이 만족되면 곱이 정의될 수 있다.
 - A * B와 B * A의 결과는 다르다.
-- Ex> <br/>$A = \begin{bmatrix} 1 & 2 & 3 \\\\ 4 & 5 & 6 \end{bmatrix} B = \begin{bmatrix}  1 & 2 \\\\ 3 & 4 \\\\ 5 & 6 \end{bmatrix}$ <br/>
-  - $A + B $ <br/> $ = \begin{bmatrix} (1*1)+(2*3)+(4*5) & (1*2)+(2*4)+(3*6) \\\\ (4*1)+(5*3)+(6*5) & (4*2)+(5*4)+(6*6) \end{bmatrix} $ <br/>
-  $ = \begin{bmatrix} 27 & 28 \\\\ 49 & 64 \end{bmatrix}$
+- Ex> <br/>$A = \begin{bmatrix} 1 & 2 & 3 \\\\ 4 & 5 & 6 \end{bmatrix} B = \begin{bmatrix}  1 & 2 & 3\\\\ 4 & 5 & 6 \\\\ 7 & 8 & 9 \end{bmatrix}$ <br/>
+  - $A + B $ <br/> $ = \begin{bmatrix} (1*1)+(2*4)+(3*7) & (1*2)+(2*5)+(3*8) & (1*3)+(2*6)+(3*9) \\\\ (4*1)+(5*4)+(6*7) & (4*2)+(5*5)+(6*8) & (4*3)+(5*6)+(6*9) \end{bmatrix} $ <br/>
+  $ = \begin{bmatrix} 30 & 36 & 42 \\\\ 66 & 81 & 96 \end{bmatrix}$
 
 ## 항등 행렬
 
