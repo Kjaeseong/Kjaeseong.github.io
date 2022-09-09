@@ -28,7 +28,7 @@ last_modified_at: 2022-09-08
 - 열 벡터 : 한 개의 열을 가지는 행렬
   - U = $\begin{bmatrix} u_x \\\\ u_y \\\\ u_z \end{bmatrix}$
 
-### 상등, 스칼라 곱, 더하기
+## 상등, 스칼라 곱, 더하기
 $A = \begin{bmatrix} 1 & 5 \\\\ -2 & 3 \end{bmatrix}$   $B = \begin{bmatrix} 6 & 2 \\\\ 5 & -8 \end{bmatrix}$<br/><br/>$C = \begin{bmatrix} 1 & 5 \\\\ -2 & 3 \end{bmatrix}$ $D = \begin{bmatrix} 1 & 2 & -1 & 3 \\\\ -6 & 3 & 0 & 0 \end{bmatrix}$
 - 동일한 차원을 가지고, 각 대응 항목이 같은 두 행렬은 같다
   - Ex> $A = C$, $A \ne B$ , $A \ne D$
@@ -46,9 +46,10 @@ $A = \begin{bmatrix} 1 & 5 \\\\ -2 & 3 \end{bmatrix}$   $B = \begin{bmatrix} 6 &
 - 행렬 곱 AB를 얻기 위해
   - A의 열, B의 행 수가 반드시 같아야 한다.
   - 위 조건이 만족되면 곱이 정의될 수 있다.
-  - 행렬 곱 방법 그려야할듯.
 - A * B와 B * A의 결과는 다르다.
-- 
+- Ex> <br/>$A = \begin{bmatrix} 1 & 2 & 3 \\\\ 4 & 5 & 6 \end{bmatrix} B = \begin{bmatrix}  1 & 2 \\\\ 3 & 4 \\\\ 5 & 6 \end{bmatrix}$ <br/>
+  - $A + B $ <br/> $ = \begin{bmatrix} (1*1)+(2*3)+(4*5) & (1*2)+(2*4)+(3*6) \\\\ (4*1)+(5*3)+(6*5) & (4*2)+(5*4)+(6*6) \end{bmatrix} $ <br/>
+  $ = \begin{bmatrix} 27 & 28 \\\\ 49 & 64 \end{bmatrix}$
 
 ## 항등 행렬
 
