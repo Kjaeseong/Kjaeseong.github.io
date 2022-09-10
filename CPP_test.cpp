@@ -3,27 +3,20 @@ using namespace std;
 
 int main()
 {
-    int n;
-    cin >> n;
-    int StartNum = n;
+    int Index;
+    int Max = 0;
 
-    if(n < 10)
+    for(int i = 1; i <= 9; i++)
     {
-        n *= 10;
-    }
-    
-    for(int i = 0; i >= 0; i++)
-    {
-        if(i != 0 && n == StartNum)
+        int num;
+        cin >> num;
+
+        if(num > Max)
         {
-            cout << i;
-            break;
+            Max = num;
+            Index = i;
         }
-
-        int a = (n % 10) * 10;
-        int b = ((n / 10) + (n % 10)) % 10;
-        n = a + b;
     }
-}
 
-// 1110
+    cout << Max << "\n" << Index;
+}
