@@ -29,16 +29,16 @@ last_modified_at: 2022-09-08
   - U = $\begin{bmatrix} u_x \\\\ u_y \\\\ u_z \end{bmatrix}$
 
 ## 상등, 스칼라 곱, 더하기
-$A = \begin{bmatrix} 1 & 5 \\\\ -2 & 3 \end{bmatrix}$   $B = \begin{bmatrix} 6 & 2 \\\\ 5 & -8 \end{bmatrix}$<br/><br/>$C = \begin{bmatrix} 1 & 5 \\\\ -2 & 3 \end{bmatrix}$ $D = \begin{bmatrix} 1 & 2 & -1 & 3 \\\\ -6 & 3 & 0 & 0 \end{bmatrix}$
+$A = \begin{bmatrix} a_{11} & a_{12} \\\\ a_{21} & a_{22} \end{bmatrix}$   $B = \begin{bmatrix} b_{11} & b_{12} \\\\ b_{21} & b_{22} \end{bmatrix}$<br/><br/>$C = \begin{bmatrix} c_{11} & c_{12} \\\\ c_{21} & c_{22} \end{bmatrix}$ $D = \begin{bmatrix} d_{11} & d_{12} & d_{13} & d_{14} \\\\ d_{21} & d_{22} & d_{23} & d_{24} \end{bmatrix}$
 - 동일한 차원을 가지고, 각 대응 항목이 같은 두 행렬은 같다
   - Ex> $A = C$, $A \ne B$ , $A \ne D$
  - 행렬의 각 항목을 스칼라로 곱하는 방법으로 행렬을 스칼라로 곱할 수 있다.
-  - Ex> $k = 2$일 때,<br/>$kD = \begin{bmatrix} k(1) & k(2) & k(-1) & k(3) \\\\ k(-6) & k(3) & k(0) & k(0) \end{bmatrix} = \begin{bmatrix} 2 & 4 & -2 & 6 \\\\ -12 & 6 & 0 & 0 \end{bmatrix}$
+  - Ex> $k = 2$일 때,<br/>$kD = \begin{bmatrix} k\cdot d_{11} & k\cdot d_{12} & k\cdot d_{13} & k\cdot d_{14} \\\\ k\cdot d_{21} & k\cdot d_{22} & k\cdot d_{23} & k\cdot d_{24} \end{bmatrix}$
 - 행렬이 동일한 차원을 가지는 경우 더할 수 있다.
   - 각 행렬의 동일한 항목을 더한다.
-  - Ex><br/>$A + B = \begin{bmatrix} 1 & 5 \\\\ -2 & 3 \end{bmatrix} + \begin{bmatrix} 6 & 2 \\\\ 5 & -8 \end{bmatrix} = \begin{bmatrix} 6 & 7 \\\\ 3 & -5 \end{bmatrix}$
+  - Ex> <br/> $A + B = \begin{bmatrix} a_{11} + b_{11} & a_{12} + b_{12} \\\\ a_{21} + b_{21} & a_{22} + b_{22} \end{bmatrix}$
 - 행렬이 동일한 차원을 가지는 경우 뺄 수 있다.
-  - Ex><br/>$A - B = A + (-B) = \begin{bmatrix} 1 & 5 \\\\ -2 & 3 \end{bmatrix} - \begin{bmatrix} 6 & 2 \\\\ 5 & -8 \end{bmatrix} = \begin{bmatrix} -5 & 3 \\\\ -7 & -11 \end{bmatrix}$
+  - Ex> <br/> $A - B = \begin{bmatrix} a_{11} - b_{11} & a_{12} - b_{12} \\\\ a_{21} - b_{21} & a_{22} - b_{22} \end{bmatrix}$
 
 ### 곱
 - 3D 컴퓨터 그래픽에서 행렬을 이용하기 위한 가장 중요한 연산
@@ -47,10 +47,14 @@ $A = \begin{bmatrix} 1 & 5 \\\\ -2 & 3 \end{bmatrix}$   $B = \begin{bmatrix} 6 &
   - A의 열, B의 행 수가 반드시 같아야 한다.
   - 위 조건이 만족되면 곱이 정의될 수 있다.
 - A * B와 B * A의 결과는 다르다.
-- Ex> <br/> $A = \begin{bmatrix} 1 & 2 & 3 \\\\ 4 & 5 & 6 \end{bmatrix} B = \begin{bmatrix}  1 & 2 & 3\\\\ 4 & 5 & 6 \\\\ 7 & 8 & 9 \end{bmatrix}$ <br/>
-  - $A + B$ <br/> 
-  $= \begin{bmatrix} (1\times1)+(2\times4)+(3\times7) & (1\times2)+(2\times5)+(3\times8) & (1\times3)+(2\times6)+(3\times9) \\\\ (4\times1)+(5\times4)+(6\times7) & (4\times2)+(5\times5)+(6\times8) & (4\times3)+(5\times6)+(6\times9) \end{bmatrix}$ <br/>
-  $= \begin{bmatrix} 30 & 36 & 42 \\\\ 66 & 81 & 96 \end{bmatrix}$
+- Ex> <br/> $A = \begin{bmatrix} a_{11} & a_{12} & a_{13} \\\\ a_{21} & a_{22} & a_{23} \end{bmatrix} B = \begin{bmatrix}  b_{11} & b_{12} & b_{13} \\\\ b_{21} & b_{22} & b_{23} \\\\ b_{31} & b_{32} & b_{33} \end{bmatrix}$ <br/>
+  - $A \times B = R \begin{bmatrix} r_{11} & r_{12} & r_{13} \\\\ r_{21} & r_{22} & r_{23} \end{bmatrix}$ <br/> 
+  $ r_{11} = (a_{11} \cdot b_{11})+(a_{12} \cdot b_{21})+(a_{13} \cdot b_{31})$ <br/> 
+  $ r_{12} = (a_{11} \cdot b_{12})+(a_{12} \cdot b_{22})+(a_{13} \cdot b_{32})$ <br/> 
+  $ r_{13} = (a_{11} \cdot b_{31})+(a_{12} \cdot b_{32})+(a_{13} \cdot b_{33})$ <br/> 
+  $ r_{21} = (a_{21} \cdot b_{11})+(a_{22} \cdot b_{21})+(a_{23} \cdot b_{31})$ <br/> 
+  $ r_{22} = (a_{21} \cdot b_{12})+(a_{22} \cdot b_{22})+(a_{23} \cdot b_{32})$ <br/> 
+  $ r_{23} = (a_{21} \cdot b_{13})+(a_{22} \cdot b_{23})+(a_{23} \cdot b_{33})$ <br/> 
 
 ## 항등 행렬
 
