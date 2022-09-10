@@ -109,7 +109,7 @@ $A = \begin{bmatrix} a_{11} & a_{12} \\\\ a_{21} & a_{22} \end{bmatrix}$   $B = 
   - 이와 같은 행렬은 직각이라 할 수 있다.
 
 ### 크기 변형 행렬
-- ![02]()
+- ![02](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/220909_Matrix02.png?raw=true)
 - $S(q) = \begin{bmatrix} q_x & 0 & 0 & 0 \\\\ 0 & q_y & 0 & 0 \\\\ 0 & 0 & q_z & 0 \\\\ 0 & 0 & 0 & 1 \end{bmatrix}$
 - 위 행렬을 벡터와 곱하는 경우 크기 변경
   - $x-$ 축으로 $q_x$ 만큼
@@ -118,9 +118,6 @@ $A = \begin{bmatrix} a_{11} & a_{12} \\\\ a_{21} & a_{22} \end{bmatrix}$   $B = 
 - 크기 변형 행렬의 역은 각 크기 변형 인자의 역으로 얻어진다.
   - $S^{-1} = S(\frac{1}{q_x},\frac{1}{q_y},\frac{1}{q_z}) = \begin{bmatrix} \frac{1}{q_x} & 0 & 0 & 0 \\\\ 0 & \frac{1}{q_y} & 0 & 0 \\\\ 0 & 0 & \frac{1}{q_z} & 0 \\\\ 0 & 0 & 0 & 1 \end{bmatrix} $
 
-### 변환 조합하기
-- 이동, 회전, 크기변형을 한번에 하기 위함
-  - 여러 변환을 결합하면 연산 수를 줄여 성능에도 영향을 준다.
 
 
 
