@@ -8,6 +8,7 @@
     },
     "files.associations": {
         "vector": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "xiosbase": "cpp"
     }
 }
