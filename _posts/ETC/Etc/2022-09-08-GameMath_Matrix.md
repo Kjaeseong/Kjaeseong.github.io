@@ -117,3 +117,6 @@ $A = \begin{bmatrix} a_{11} & a_{12} \\\\ a_{21} & a_{22} \end{bmatrix}$   $B = 
   - $z-$ 축으로 $q_z$ 만큼
 - 크기 변형 행렬의 역은 각 크기 변형 인자의 역으로 얻어진다.
   - $S^{-1} = S(\frac{1}{q_x},\frac{1}{q_y},\frac{1}{q_z}) = \begin{bmatrix} \frac{1}{q_x} & 0 & 0 & 0 \\\\ 0 & \frac{1}{q_y} & 0 & 0 \\\\ 0 & 0 & \frac{1}{q_z} & 0 \\\\ 0 & 0 & 0 & 1 \end{bmatrix} $
+
+# 참고도서
+- Frank D. Luna저 / 정보문화사 : DirectX 9를 이용한 3D Game 프로그래밍 입문
