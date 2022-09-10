@@ -91,27 +91,31 @@ $A = \begin{bmatrix} a_{11} & a_{12} \\\\ a_{21} & a_{22} \end{bmatrix}$   $B = 
 -  4*4 행렬을 통해 원하는 모든 변환을 표현할 수 있다.
 
 ### 이동 행렬
-- ![00]()
+- ![00](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/220909_Matrix00.png?raw=true)
 - $T(p) = \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ p_x & p_y & p_z & 1 \end{bmatrix}$
 - 그래프 상 $(x, y, z, 1)$ 벡터를 $T(p)$ 행렬로 곱하는 경우
   - $x$축 $p_x$ 이동
   - $y$축 $p_y$ 이동
   - $z$축 $p_z$ 이동
 
-
-$cos\theta$
-$sin\theta$
-
 ### 회전 행렬
-- ![01]()
+- ![01](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/220909_Matrix01.png?raw=true)
 - 행렬 이용시 $x-,y-,z-$ 축에서 벡터 라디안 회전 가능
   - 각도는 회전축을 내려다 볼 때 시계 방향으로 측정
 - $x-$ 축 회전 행렬 $X(\vartheta) = \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & cos\theta & sin\theta & 0 \\\\ 0 & -sin\theta & cos\theta & 0 \\\\ 0 & 0 & 0 & 1 \end{bmatrix}$
 - $y-$ 축 회전 행렬 $Y(\vartheta) = \begin{bmatrix} cos\theta & 0 & -sin\theta & 0 \\\\ 0 & 1 & 0 & 0 \\\\ sin\theta & 0 & cos\theta & 0 \\\\ 0 & 0 & 0 & 1 \end{bmatrix}$
 - $z-$ 축 회전 행렬 $Z(\vartheta) = \begin{bmatrix} cos\theta & sin\theta & 0 & 0 \\\\ -sin\theta & cos\theta & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 & 1 \end{bmatrix}$
-
+- 행렬 $R$ 의 역은 전치 $R^{T} = R^{-1}$ 이다.
+  - 이와 같은 행렬은 직각이라 할 수 있다.
 
 ### 크기 변형 행렬
+- ![02]()
+- $S(q) = \begin{bmatrix} q_x & 0 & 0 & 0 \\\\ 0 & q_y & 0 & 0 \\\\ 0 & 0 & q_z & 0 \\\\ 0 & 0 & 0 & 1 \end{bmatrix}$
+- 위 행렬을 벡터와 곱하는 경우 크기 변경
+  - $x-$ 축으로 $q_x$ 만큼
+  - $y-$ 축으로 $q_y$ 만큼
+  - $z-$ 축으로 $q_z$ 만큼
+
 
 ### 변환 조합하기
 - 이동, 회전, 크기변형을 한번에 하기 위함
