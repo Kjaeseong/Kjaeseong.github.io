@@ -51,7 +51,7 @@ $A = \begin{bmatrix} a_{11} & a_{12} \\\\ a_{21} & a_{22} \end{bmatrix}$   $B = 
   - $A \times B = R \begin{bmatrix} r_{11} & r_{12} & r_{13} \\\\ r_{21} & r_{22} & r_{23} \end{bmatrix}$ <br/> 
   $ r_{11} = (a_{11} \cdot b_{11})+(a_{12} \cdot b_{21})+(a_{13} \cdot b_{31})$ <br/> 
   $ r_{12} = (a_{11} \cdot b_{12})+(a_{12} \cdot b_{22})+(a_{13} \cdot b_{32})$ <br/> 
-  $ r_{13} = (a_{11} \cdot b_{31})+(a_{12} \cdot b_{32})+(a_{13} \cdot b_{33})$ <br/> 
+  $ r_{13} = (a_{11} \cdot b_{31})+(a_{12} \cdot b_{23})+(a_{13} \cdot b_{33})$ <br/> 
   $ r_{21} = (a_{21} \cdot b_{11})+(a_{22} \cdot b_{21})+(a_{23} \cdot b_{31})$ <br/> 
   $ r_{22} = (a_{21} \cdot b_{12})+(a_{22} \cdot b_{22})+(a_{23} \cdot b_{32})$ <br/> 
   $ r_{23} = (a_{21} \cdot b_{13})+(a_{22} \cdot b_{23})+(a_{23} \cdot b_{33})$ <br/> 
