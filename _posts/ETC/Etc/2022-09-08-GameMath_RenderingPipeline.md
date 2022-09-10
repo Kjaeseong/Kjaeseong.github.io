@@ -2,7 +2,7 @@
 title: "(작성중)렌더링 파이프라인" 
 
 categories:
-  - UnityStudy
+  - Etc
 
 toc: true
 toc_sticky: true

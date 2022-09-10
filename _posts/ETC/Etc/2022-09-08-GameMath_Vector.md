@@ -2,7 +2,7 @@
 title: "게임기초수학_벡터" 
 
 categories:
-  - UnityStudy
+  - Etc
 
 toc: true
 toc_sticky: true

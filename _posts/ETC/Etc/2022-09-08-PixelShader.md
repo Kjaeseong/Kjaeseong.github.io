@@ -2,7 +2,7 @@
 title: "(작성중)컴퓨터 그래픽스 기초" 
 
 categories:
-  - UnityStudy
+  - Etc
 
 toc: true
 toc_sticky: true
