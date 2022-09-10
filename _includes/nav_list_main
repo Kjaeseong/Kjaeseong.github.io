@@ -108,8 +108,15 @@
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "Update" %}
-                        <li><a href="/categories/update" class="">Update ({{category[1].size}})</a></li>
+                    {% if category[0] == "Etc" %}
+                        <li><a href="/categories/Etc" class="">Etc ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "News" %}
+                        <li><a href="/categories/News" class="">News ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>

@@ -1,11 +1,11 @@
 ---
-title: "일상"
+title: "기타"
 layout: archive
-permalink: categories/update
+permalink: categories/Etc
 author_profile: true
 sidebar_main: true
 ---
 
 
-{% assign posts = site.categories.Update %}
+{% assign posts = site.categories.Etc %}
 {% for post in posts %} {% include archive-single.html type=page.entries_layout %} {% endfor %}
