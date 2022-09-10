@@ -1,5 +1,5 @@
 ---
-title: "(작성중)게임기초수학_행렬" 
+title: "게임기초수학_행렬" 
 
 categories:
   - UnityStudy
@@ -10,7 +10,7 @@ toc_sticky: true
 use_math: true
 
 date: 2022-09-08
-last_modified_at: 2022-09-08
+last_modified_at: 2022-09-09
 ---
 
 # 게임 기초 수학
@@ -117,8 +117,3 @@ $A = \begin{bmatrix} a_{11} & a_{12} \\\\ a_{21} & a_{22} \end{bmatrix}$   $B = 
   - $z-$ 축으로 $q_z$ 만큼
 - 크기 변형 행렬의 역은 각 크기 변형 인자의 역으로 얻어진다.
   - $S^{-1} = S(\frac{1}{q_x},\frac{1}{q_y},\frac{1}{q_z}) = \begin{bmatrix} \frac{1}{q_x} & 0 & 0 & 0 \\\\ 0 & \frac{1}{q_y} & 0 & 0 \\\\ 0 & 0 & \frac{1}{q_z} & 0 \\\\ 0 & 0 & 0 & 1 \end{bmatrix} $
-
-
-
-
-
