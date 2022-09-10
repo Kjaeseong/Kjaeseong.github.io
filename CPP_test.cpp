@@ -3,48 +3,14 @@ using namespace std;
 
 int main()
 {
-    int Dice[3];
-    int Count = 1;
-    int SameNum;
-    int MaxNum = 0;
+    int Testcase;
+    cin >> Testcase;
 
-    for(int i = 0; i < 3; i++)
+    for(int i = 1; i <= Testcase; i++)
     {
-        cin >> Dice[i];    
-        if(Dice[i] > MaxNum)
-        {
-            MaxNum = Dice[i];
-        }
-    }
+        int a, b;
+        cin >> a >> b;
 
-    if(Dice[0] == Dice[1])
-    {
-        Count++;
-        SameNum = Dice[0];
+        cout << "Case #" << i << ": " << a + b << endl;
     }
-    if(Dice[0] == Dice[2])
-    {
-        Count++;
-        SameNum = Dice[0];
-    }
-    if(Count <= 1 && Dice[1] == Dice[2])
-    {
-        Count++;
-        SameNum = Dice[1];
-    }
-
-    int print = 0;
-    switch(Count)
-    {
-        case 3:
-            print = (SameNum * 1000) + 10000;
-            break;
-        case 2:
-            print = (SameNum * 100) + 1000;
-            break;
-        default:
-            print = MaxNum * 100;
-            break;
-    }
-    cout << print;
 }
