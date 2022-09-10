@@ -76,8 +76,8 @@ $A = \begin{bmatrix} a_{11} & a_{12} \\\\ a_{21} & a_{22} \end{bmatrix}$   $B = 
 ## 행렬의 전치
 - $A = \begin{bmatrix} a_{11} & a_{12} & a_{13} \\\\ a_{21} & a_{22} & a_{23} \end{bmatrix}$ , $A^T = \begin{bmatrix} a_{11} & a_{21}\\\\ a_{12} & a_{22} \\\\ a_{13} & a_{23} \end{bmatrix}$
 - 행렬의 열과 행을 교환하면 행렬의 전치(tarnspose)를 수행할 수 있다.
-- $m*n$행렬의 전치는 &n*m& 행렬.
-  - 행렬 M의 전치는 M$^T$로 표기
+- $m \times n$행렬의 전치는 $n \times m$ 행렬.
+  - 행렬 $M$ 의 전치는 $M^T$ 로 표기
 
 ## D3DX 행렬
 - Direct3D 애플리캐이션 프로그래밍 시 4*4 행렬과 1*4행 벡터만을 사용
@@ -90,23 +90,33 @@ $A = \begin{bmatrix} a_{11} & a_{12} \\\\ a_{21} & a_{22} \end{bmatrix}$   $B = 
 -  Direct3D 이용 프로그래밍에서 변환 표현을 위해 4*4 행렬을 사용한다.
 -  4*4 행렬을 통해 원하는 모든 변환을 표현할 수 있다.
 
-## 이동 행렬
-- 55페이지 이동 그래프
-- 기본적인 모양은 항등행렬
-- 하....
+### 이동 행렬
+- ![00]()
+- $T(p) = \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ p_x & p_y & p_z & 1 \end{bmatrix}$
+- 그래프 상 $(x, y, z, 1)$ 벡터를 $T(p)$ 행렬로 곱하는 경우
+  - $x$축 $p_x$ 이동
+  - $y$축 $p_y$ 이동
+  - $z$축 $p_z$ 이동
 
-## 회전 행렬
-- 56페이지 그래프 2개
-- 크기 변형 행렬
+
+$cos\theta$
+$sin\theta$
+
+### 회전 행렬
+- ![01]()
+- 행렬 이용시 $x-,y-,z-$ 축에서 벡터 라디안 회전 가능
+  - 각도는 회전축을 내려다 볼 때 시계 방향으로 측정
+- $x-$ 축 회전 행렬 $X(\vartheta) = \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & cos\theta & sin\theta & 0 \\\\ 0 & -sin\theta & cos\theta & 0 \\\\ 0 & 0 & 0 & 1 \end{bmatrix}$
+- $y-$ 축 회전 행렬 $Y(\vartheta) = \begin{bmatrix} cos\theta & 0 & -sin\theta & 0 \\\\ 0 & 1 & 0 & 0 \\\\ sin\theta & 0 & cos\theta & 0 \\\\ 0 & 0 & 0 & 1 \end{bmatrix}$
+- $z-$ 축 회전 행렬 $Z(\vartheta) = \begin{bmatrix} cos\theta & sin\theta & 0 & 0 \\\\ -sin\theta & cos\theta & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 & 1 \end{bmatrix}$
 
 
-## 크기 변형 행렬
+### 크기 변형 행렬
 
-## 변환 조합하기
+### 변환 조합하기
 - 이동, 회전, 크기변형을 한번에 하기 위함
-  - 여러 변환을 결합하면 연순 수를 줄여 성능에도 영향을 준다.
+  - 여러 변환을 결합하면 연산 수를 줄여 성능에도 영향을 준다.
 
-## 벡터 변환을 위한 몇 가지 함수들(with C)
 
 
 
