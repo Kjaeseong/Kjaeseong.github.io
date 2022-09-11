@@ -1,22 +1,40 @@
 #include <iostream>
+#include <vector>
 using namespace std;
+
 
 int main()
 {
-    int Index;
-    int Max = 0;
+    int InputNum[10];
+    vector<int> v;
+    int Count = 0;
 
-    for(int i = 1; i <= 9; i++)
+    for(int i = 0; i < 10; i++)
     {
-        int num;
-        cin >> num;
+        cin >> InputNum[i];
+        InputNum[i] %= 42;
 
-        if(num > Max)
+        if(v.size() != 0)
         {
-            Max = num;
-            Index = i;
+            for(int j = 0; j < v.size(); j++)
+            {
+                if(v[j] )
+            }
         }
+        else
+        {
+            v.push_back(InputNum[i]);
+
+        }
+
     }
 
-    cout << Max << "\n" << Index;
+    for(int i = 0; i < 10; i++)
+    {
+        for(int j = )
+    }
+
+    cout << Count;
+
+
 }
