@@ -1,5 +1,5 @@
 ---
-title: "(작성중)Unity Programming" 
+title: "Unity Programming" 
 
 categories:
   - UnityStudy
