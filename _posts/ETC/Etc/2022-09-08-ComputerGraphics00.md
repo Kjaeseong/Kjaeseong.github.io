@@ -13,9 +13,12 @@ last_modified_at: 2022-09-08
 
 # 컴퓨터 그래픽스 기초
 
-## 1. 픽셀과 셰이더
+## 기초지식
+- 기초지식은 [삼성 디스플레이](https://news.samsungdisplay.com/305)에서 정리를 잘 해놨다.
 
-### 1.1. 픽셀
+### 1. 픽셀과 셰이더
+
+#### 1.1. 픽셀
 - 픽셀 : 디지털 이미지를 구성하는 최소 단위( = 화소)
 - 가산혼합 : R, G, B로 서브픽셀 구성, 혼합해 원하는 색을 만든다
   - 불투명도를 나타내기 위한 알파채널 포함
@@ -23,13 +26,17 @@ last_modified_at: 2022-09-08
   - *서브픽셀 : 1픽셀 이내의 R, G, B가 각 서브픽셀.
 - 각 채널을 통과하는 빛의 양으로 계조(Grayscale)표현
 
-### 1.2. 쉐이더(Shader)
+
+#### 1.2. 쉐이더(Shader)
 - 최종적으로 화면에 출력할 픽셀의 색을 정하는 함수
 
-## 2. 렌더링 파이프라인
+## 렌더링 파이프라인
 - ( = Graphic Pipeline)
 - 3D물체를 화면에 출력하기 위한 일련의 과정
 - 그래픽스 API에 따라 다를 수 있다.
+  - [OpenGL](https://www.khronos.org/opengl/wiki/Rendering_Pipeline_Overview)
+  - [Direct3D 11](https://docs.microsoft.com/ko-kr/windows/win32/direct3d11/overviews-direct3d-11-graphics-pipeline)
+
 
 ### 2.1. 버텍스 로드
 - 3D 물체가 어떻게 생겼는지에 대한 데이터
