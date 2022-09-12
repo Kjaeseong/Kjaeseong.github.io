@@ -15,12 +15,13 @@ last_modified_at: 2022-09-12
 
 # 이벤트 함수
 
-## 1. 이벤트 함수 실행 순서
-- [Unity Documentation](https://docs.unity3d.com/kr/2021.3/Manual/ExecutionOrder.html)참조
+## 이벤트 함수 실행 순서
 - 각 이벤트 함수의 실행 순서를 숙지하고 있어야 버그 방지가 가능하다.
+- 해당 게시글에서는 대략적인 정보를 살펴보되, 자세한 사용법과 설명은 개별 게시글을 통해 다룬다.
+- 유니티 공식 문서 기반으로 작성한다.
+  - 참고 링크 : [Unity Documentation](https://docs.unity3d.com/kr/2021.3/Manual/ExecutionOrder.html)
 
-### 1.1. 첫 번째 씬 로드
-- 씬 시작 시 한번 호출
+### 1. 첫번째 씬 로드
 
 #### Awake()
 - Start 함수 전 호출.
@@ -35,16 +36,7 @@ last_modified_at: 2022-09-12
 - 해당 컴포넌트, 혹은 오브젝트가 활성화 될 때마다 실행
 - 레벨 로드, 스크립트를 포함한 게임오브젝트가 인스턴스화될 때와 같이 MonoBehaviour를 생성할때 호출
 
-### 1.2. 에디터
-
-#### Reset()
-- 오브젝트에 처음 연결하거나 Reset 커맨드 사용시 스크립트 프로퍼티 초기화를 위해 호출
-
-#### OnValidate()
-- 스크립트 프로퍼티가 설정될 때마하 호출(오브젝트 역직렬화될 때 포함)
-- 씬을 열 때와 도메인을 다시 로드한 후와 같이 다양한 시기에 발생
-
-### 1.3. 첫 번째 프레임 업데이트 전
+### 2. 첫 번째 프레임 업데이트 전
 
 #### Start()
 - 인스턴스 활성화시 첫 번재 프레임 업데이트 전 호출
@@ -70,7 +62,7 @@ last_modified_at: 2022-09-12
   - 카메라와 케릭터는 각 스크립트로 나눠져 있고, 양쪽 다 Update로 처리하는 경우
   - 카메라의 Update가 먼저 실행되는 경우도 있다.
 
-### 1.5. 애니메이션 업데이트 루프 - 내용 추가 요.
+### 1.5. 애니메이션 업데이트 루프
 
 #### OnStateMachineEnter()
 - State Machine Update 단계 중 
@@ -106,11 +98,7 @@ last_modified_at: 2022-09-12
 
 #### OnCollisionEnter(Collision other)
 - 상대 오브젝트에 대한 정보를 많이 담고 있다.
-  - Transform
-  - Collider
-  - GameObject
-  - Rigidbody
-  - 상대속도..?
+  - Transform, Collider, GameObject, Rigidbody 등
 - 자신, 상대중 하나는 반드시 Rigidbody컴포넌트를 지녀야 한다.
   - IsKinematic이 꺼져 있어야 한다.
 - 나와 상대방 모두 Collider 컴포넌트를 지녀야 한다.
@@ -127,7 +115,12 @@ last_modified_at: 2022-09-12
   - 게임 화면에서는 보이지 않는다.
 - 해당 스크립트가 붙은 오브젝트를 선택했을 때만 그린다.
 
-### 1.8. 비활성 / 파괴
+### 1.8. 코루틴
+- 일반적으로 Update함수 반환 후 실행.
+- 주어진 조건이 완료될 때까지 실행을 중단한다.
+  - 특정 조건, 시간이 만족될 경우 실행할 수 있다.
+
+### 1.9. 비활성 / 파괴
 
 #### OnDisable()
 - 해당 스크립트가 붙어 있는 오브젝트가 비활성화 될 때마다 실행
