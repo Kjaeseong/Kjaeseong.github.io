@@ -27,10 +27,40 @@ last_modified_at: 2022-09-12
   - 메모리 누적이 덜 되므로 부하를 덜 주게 된다.
 
 ## 사용법
-![00]()
+- ![00]()
+- 해당 사진에서 캡슐을 Player, 큐브를 Enemy로 가정
 
 ### OverlapBox
+- Physics.OverlapBox(Vector3 Center, Vector3 halfExtents, Quaternion Rotation, int layerMask, queryTriggerInteraction = QueryTriggerInteraction.UseGlobal)
+  - Centor : Box의 중심
+  - halfExtents : Box의 크기의 절반
+  - orientation : 방향(회전)
+  - layerMask : 레이어마스크(해당 layer에 해당하는 Collider들만 반환한다)
+  - 
 
 ```cs
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
+public class Player : MonoBehaviour
+{
+
+    private void Update() 
+    {
+       PlayerCollision();
+    }
+
+    void PlayerCollision()
+    {
+        Collider[] arr = Physics.OverlapBox(transform.position, transform.localScale * 5f, Quaternion.identity);
+        
+        for(int i = 0; i < 5; i++)
+        {
+            Debug.Log(arr[i]);
+        } 
+    }
+}
 ```
+- ![01]()
+- 실행 시 Player를 포함한 모든 Enemy 감지 확인
