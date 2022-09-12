@@ -109,5 +109,36 @@ public class Player : MonoBehaviour
 }
 ```
 
-- ![02](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/2022-09-12-UnityPhysicsOverlap_01.png?raw=true)
+- ![02](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/2022-09-12-UnityPhysicsOverlap_02.png?raw=true)
 - 실행 시 Player를 포함한 모든 Enemy 감지 및 배열 반환 확인
+
+### Physics.OverlapSphere
+- Physics.OverlapSphere(Vector3 position, float radius, int layerMask, QueryTriggerInteraction)
+  - position : Sphere의 위치
+  - radius : 반경
+  - layerMask : 레이어마스크(해당 layer에 해당하는 Collider들만 반환)
+  - QueryTriggerInteraction : 트리거와 충돌할지 결정
+
+```cs
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Player : MonoBehaviour
+{
+    private void Update() 
+    {
+       PlayerSphere();
+    }
+
+    void PlayerSphere()
+    {
+        Collider[] arr = Physics.OverlapSphere(transform.position, 5f);
+        
+        for(int i = 0; i < 5; i++)
+        {
+            Debug.Log(arr[i]);
+        } 
+    }
+}
+```
