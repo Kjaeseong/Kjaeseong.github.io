@@ -1,40 +1,28 @@
-#include <iostream>
-#include <vector>
-using namespace std;
-
-
-int main()
+bool BinarySearch(int* arr, int size, int value)
 {
-    int InputNum[10];
-    vector<int> v;
-    int Count = 0;
+    //초기 범위
+    int start = 0;
+    int end = size;
 
-    for(int i = 0; i < 10; i++)
+    while(start < end)
     {
-        cin >> InputNum[i];
-        InputNum[i] %= 42;
+        // 시작과 끝의 중간점 지정
+        int index = (start + end) / 2;
 
-        if(v.size() != 0)
+        if(arr[index] == value)
         {
-            for(int j = 0; j < v.size(); j++)
-            {
-                if(v[j] )
-            }
+            // 고른 곳이 원하는 데이터라면 true
+            return true;
+        }
+        else if(arr[index] < value)
+        {
+            // 고른 곳이 원하는 데이터보다 작다면 시작 위치 조정
+            start = index + 1;
         }
         else
         {
-            v.push_back(InputNum[i]);
-
+            // 고른 곳이 원하는 데이터보다 크다면 종료 위치 조정
+            end = index;
         }
-
     }
-
-    for(int i = 0; i < 10; i++)
-    {
-        for(int j = )
-    }
-
-    cout << Count;
-
-
 }
