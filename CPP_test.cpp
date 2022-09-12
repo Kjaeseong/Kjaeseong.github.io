@@ -1,29 +1,32 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 int main()
 {
-    int arr[1000] = { 0 };
-    int Max = 0;
-    float result = 0;
-    
-    int Subject;
-    cin >> Subject;
+    int Testcase;
+    cin >> Testcase;
 
-    for(int i = 0; i < Subject; i++)
+    for(int i = 0; i < Testcase; i++)
     {
-        cin >> arr[i];
+        string ox;
+        cin >> ox;
 
-        if(arr[i] > Max)
+        int Score = 0;
+        int Count = 1;
+        for(int j = 0; j < ox.size(); j++)
         {
-            Max = arr[i];
+            if(ox[j] == 'O')
+            {
+                Score += Count;
+                Count++;
+            }
+            else
+            {
+                Count = 1;
+            }
         }
-    }
 
-    for(int i = 0; i < Subject; i++)
-    {
-        result += (float)arr[i] / Max * 100;
+        cout << Score << "\n";
     }
-
-    cout << result / Subject;
 }
