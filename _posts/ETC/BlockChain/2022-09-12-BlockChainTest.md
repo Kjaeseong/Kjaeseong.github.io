@@ -2,7 +2,7 @@
 title: "블록체인 게시판 테스트" 
 
 categories:
-  - UnityStudy
+  - BlockChain
 
 toc: true
 toc_sticky: true
