@@ -32,6 +32,7 @@ last_modified_at: 2022-09-12
 ## 사용법
 - ![00](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/2022-09-12-UnityPhysicsOverlap_00.png?raw=true)
 - 해당 사진에서 캡슐을 Player, 큐브를 Enemy로 가정
+- layer는 개별 설정하지 않는다.
 
 ### Physics.OverlapBox
 - Physics.OverlapBox(Vector3 Center, Vector3 halfExtents, Quaternion Rotation, int layerMask, queryTriggerInteraction = QueryTriggerInteraction.UseGlobal)
@@ -179,6 +180,6 @@ public class Player : MonoBehaviour
 }
 ```
 
-- ![04](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/2022-09-12-UnityPhysicsOverlap_03.png?raw=true)
+- ![04](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/2022-09-12-UnityPhysicsOverlap_04.png?raw=true)
 - 실행 시 Player를 포함한 모든 Enemy 감지 및 배열 반환 확인
-- 
+- 감지 항목 수 반환 확인
