@@ -3,22 +3,27 @@ using namespace std;
 
 int main()
 {
-    int arr[42] = { 0 };
-    int Count = 0;
+    int arr[1000] = { 0 };
+    int Max = 0;
+    float result = 0;
+    
+    int Subject;
+    cin >> Subject;
 
-    for(int i = 0; i < 10; i++)
+    for(int i = 0; i < Subject; i++)
     {
-        int Input;
-        cin >> Input;
+        cin >> arr[i];
 
-        int Index = Input % 42;
-        arr[Index]++;
-
-        if(arr[Index] == 1)
+        if(arr[i] > Max)
         {
-            Count++;
+            Max = arr[i];
         }
     }
 
-    cout << Count;
+    for(int i = 0; i < Subject; i++)
+    {
+        result += (float)arr[i] / Max * 100;
+    }
+
+    cout << result / Subject;
 }
