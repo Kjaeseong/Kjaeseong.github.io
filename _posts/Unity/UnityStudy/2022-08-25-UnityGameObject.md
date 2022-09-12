@@ -39,7 +39,7 @@ public class GameObject_A : MonoBehaviour
     //선언
     private rigidbody _rigidbody;
     private GameObject _object_B;
-    private Script_B _script_B;
+    private ScriptB _scriptB;
 
     void Start()
     {
@@ -47,13 +47,9 @@ public class GameObject_A : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody>();
 
         //대상을 이름으로 찾기
-        _object_B = Find("GameObject_B").GetComponent<GameObject>();
-
-        //대상을 태그로 찾기
-        _object_B = FindWithTag("Player").GetComponent<GameObject>();
-
-        //얻어온 대상에 포함된 스크립트 불러오기
-        _script_B = _object_B.GetComponent<Script_B>();
+        _object_B = GameObject.Find("GameObject_B");
+        //찾은 오브젝트의 스크립트(컴포넌트) 접근
+        _scriptB = _object_B.GetComponent<ScriptB>();
     }
 }
 ```
