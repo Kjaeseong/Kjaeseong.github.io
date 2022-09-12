@@ -152,7 +152,11 @@ public class Player : MonoBehaviour
 ### Physics.Overlap[Box / Capsule / Sphere]NonAlloc
 - 사용방법은 모두 비슷하므로, Sphere로 예시 작성
 - Physics.OverlapSphereNonAlloc(Vector3 position, float radius, Collider[] results, int layerMask, QueryTriggerInteraction)
-  - 
+  - position : Sphere의 위치
+  - radius : 반경
+  - results : 감지결과를 저장할 버퍼(배열)
+  - layerMask : 레이어마스크(해당 layer에 해당하는 Collider들만 반환)
+  - QueryTriggerInteraction : 트리거와 충돌할지 결정
 
 ```cs
 using System.Collections;
