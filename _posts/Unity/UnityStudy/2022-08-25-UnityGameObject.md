@@ -1,5 +1,5 @@
 ---
-title: "(작성중)게임 오브젝트(GameObject)" 
+title: "게임 오브젝트(GameObject)" 
 
 categories:
   - UnityStudy
@@ -8,7 +8,7 @@ toc: true
 toc_sticky: true
 
 date: 2022-08-25
-last_modified_at: 2022-08-25
+last_modified_at: 2022-09-12
 ---
 
 # 게임 오브젝트(GameObject)
@@ -27,7 +27,7 @@ last_modified_at: 2022-08-25
 - A 오브젝트에서 B오브젝트가 가진 정보에 접근하기 위해 [GetComponent](https://docs.unity3d.com/kr/2022.1/ScriptReference/Component.GetComponent.html) 메서드를 사용한다.
 - 해당 오브젝트에 접근함으로서, 오브젝트에 포함된 컴포넌트에도 접근이 가능해진다.
 - 자기 자신 오브젝트에도 접근해 다른 컴포넌트에 접근 가능
-- ex> 예제 1 - 자신 오브젝트의 컴포넌트에 접근하기
+- Ex>
 
 ```c#
 using System.Collections;
@@ -37,19 +37,25 @@ using UnityEngine;
 public class GameObject_A : MonoBehaviour
 {
     //선언
-    private Rigidbody _rigidbody;
+    private rigidbody _rigidbody;
+    private GameObject _object_B;
+    private Script_B _script_B;
+
 
     void Start()
     {
         //자신 오브젝트에 포함된 'Rigidbody'컴포넌트를 로드한다.
         _rigidbody = GetComponent<Rigidbody>();
+
+        //대상을 이름으로 찾기
+        _object_B = Find("GameObject_B").GetComponent<GameObject>();
+
+        //대상을 태그로 찾기
+        _object_B = FindWithTag("Player").GetComponent<GameObject>();
+
+        //얻어온 대상에 포함된 스크립트 불러오기
+        _script_B = _object_B.GetComponent<Script_B>();
     }
 }
 ```
 
-- ex> 예제 2 - 다른 오브젝트에 접근해 컴포넌트 불러오기
-
-```C#
-
-
-```
