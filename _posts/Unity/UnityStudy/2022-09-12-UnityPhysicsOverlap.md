@@ -27,7 +27,6 @@ last_modified_at: 2022-09-12
 ### Physics.Overlap[Box / Capsule / Sphere]NonAlloc
 - 설정 범위 내 충돌한 콜라이더들의 수를 반환(정적할당)
   - 특정 수만 반환하고 싶을 때 사용한다.
-  - 메모리 누적이 덜 되므로 부하를 덜 주게 된다.
 
 ## 사용법
 - ![00](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/2022-09-12-UnityPhysicsOverlap_00.png?raw=true)
