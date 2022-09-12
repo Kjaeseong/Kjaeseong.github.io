@@ -2,7 +2,7 @@
 title: "리뷰게시판 테스트" 
 
 categories:
-  - UnityStudy
+  - Review
 
 toc: true
 toc_sticky: true
