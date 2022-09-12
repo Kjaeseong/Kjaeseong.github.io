@@ -3,18 +3,22 @@ using namespace std;
 
 int main()
 {
-    int StartNum;
-    int x;
+    int arr[42] = { 0 };
     int Count = 0;
 
-    cin >> StartNum;
-
-    x = StartNum;
-    do
+    for(int i = 0; i < 10; i++)
     {
-        x = (x % 10 * 10) + ((x % 10 + x / 10) % 10);
-        Count++;
-    } while (x != StartNum);
+        int Input;
+        cin >> Input;
+
+        int Index = Input % 42;
+        arr[Index]++;
+
+        if(arr[Index] == 1)
+        {
+            Count++;
+        }
+    }
 
     cout << Count;
 }
