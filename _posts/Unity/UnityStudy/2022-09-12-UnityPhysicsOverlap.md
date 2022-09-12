@@ -22,9 +22,11 @@ last_modified_at: 2022-09-12
 
 ### Physics.Overlap[Box / Capsule / Sphere]
 - 설정 범위 내 충돌한 콜라이더들을 배열로 반환
+- 모든 충돌체를 배열로 반환하므로 동적할당.
 
 ### Physics.Overlap[Box / Capsule / Sphere]NonAlloc
-- 설정 범위 내 충돌한 콜라이더들의 수를 반환
+- 설정 범위 내 충돌한 콜라이더들의 수를 반환(정적할당)
+  - 특정 수만 반환하고 싶을 때 사용한다.
   - 메모리 누적이 덜 되므로 부하를 덜 주게 된다.
 
 ## 사용법
@@ -142,3 +144,41 @@ public class Player : MonoBehaviour
     }
 }
 ```
+
+- ![03](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/2022-09-12-UnityPhysicsOverlap_03.png?raw=true)
+- 실행 시 Player를 포함한 모든 Enemy 감지 및 배열 반환 확인
+
+### Physics.Overlap[Box / Capsule / Sphere]NonAlloc
+- 사용방법은 모두 비슷하므로, Sphere로 예시 작성
+- Physics.OverlapSphereNonAlloc(Vector3 position, float radius, Collider[] results, int layerMask, QueryTriggerInteraction)
+  - 
+
+```cs
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Player : MonoBehaviour
+{
+    private void Update() 
+    {
+       PlayerSphere();
+    }
+
+    void PlayerSphere()
+    {
+        Collider[] hitColliders = new Collider[5];
+        int numColliders = Physics.OverlapSphereNonAlloc(transform.position, 5f, hitColliders);
+        
+        for(int i = 0; i < 5; i++)
+        {
+            Debug.Log($"감지항목 {i} : {hitColliders[i]}");
+        }
+        Debug.Log($"감지 항목 수 : {numColliders}");
+    }
+}
+```
+
+- ![04](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/2022-09-12-UnityPhysicsOverlap_03.png?raw=true)
+- 실행 시 Player를 포함한 모든 Enemy 감지 및 배열 반환 확인
+- 
