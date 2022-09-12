@@ -101,6 +101,13 @@
             </ul>
             <ul>
                 {% for category in site.categories %}
+                    {% if category[0] == "BlockChain" %}
+                        <li><a href="/categories/BlockChain" class="">BlockChain ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
                     {% if category[0] == "Git" %}
                         <li><a href="/categories/git" class="">Git ({{category[1].size}})</a></li>
                     {% endif %}
