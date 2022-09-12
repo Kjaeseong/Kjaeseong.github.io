@@ -1,5 +1,5 @@
 ---
-title: "(작성중)Unity 3D_Physics.Overlap 함수 : 충돌체 감지" 
+title: "(작성중)Unity3D_Physics.Overlap 함수 : 충돌체 감지" 
 
 categories:
   - UnityStudy
@@ -16,6 +16,7 @@ last_modified_at: 2022-09-12
 # 충돌체 감지
 - 유니티 엔진 내에서 가상으로 충돌처리
 - 충돌한 객체'들'을 반환
+- 오브젝트에 직접 Collider 컴포넌트를 추가하는 방법도 있으나, 단 한번만 사용하려는 경우 성능상 부적절 할 수 있다.
 
 ## 종류
 
@@ -36,7 +37,7 @@ last_modified_at: 2022-09-12
   - halfExtents : Box의 크기의 절반
   - orientation : 방향(회전)
   - layerMask : 레이어마스크(해당 layer에 해당하는 Collider들만 반환한다)
-  - 
+  - QueryTriggerInteraction : 트리거와 충돌할지 결정
 
 ```cs
 using System.Collections;
@@ -62,5 +63,6 @@ public class Player : MonoBehaviour
     }
 }
 ```
+
 - ![01]()
 - 실행 시 Player를 포함한 모든 Enemy 감지 확인
