@@ -41,7 +41,6 @@ public class GameObject_A : MonoBehaviour
     private GameObject _object_B;
     private Script_B _script_B;
 
-
     void Start()
     {
         //자신 오브젝트에 포함된 'Rigidbody'컴포넌트를 로드한다.
