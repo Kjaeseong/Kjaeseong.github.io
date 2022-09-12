@@ -1,5 +1,5 @@
 ---
-title: "STL_std::forward_list / std::list" 
+title: "forward_list / list" 
 
 categories:
   - DataStructure
