@@ -1,5 +1,5 @@
 ---
-title: "(작성중)Photon을 이용한 Unity게임 서버 구축_00 : 환경 구축" 
+title: "(내용 추가 예정)Photon을 이용한 Unity게임 서버 구축_00 : 환경 구축" 
 
 categories:
   - UnityStudy
@@ -26,10 +26,10 @@ last_modified_at: 2022-09-13
   - 작성하기 클릭
 - ![02](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/2022-09-13-UnityPhoton00_02.png?raw=true)
 - 4. 애플리케이션 ID는 미리 복사해둔다.
-- ![03]()
-- 유니티 에셋스토어 - PUN2 에셋 추가
-  - 해당 포스팅에선 Free버전 기준 작성
 
 ## 유니티 에셋스토어 - Photon Pun Import
-- 
+- ![03](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/2022-09-13-UnityPhoton00_03.png?raw=true)
+- 유니티 에셋스토어 - PUN2 에셋 추가 및 Import
+  - 해당 포스팅에선 Free버전 기준 작성
+- 유니티 Import 
 
