@@ -20,17 +20,17 @@ last_modified_at: 2022-09-13
 
 ## Photon 서비스
 - PhotonNetwork : 포톤의 네트워크 서비스를 이용하기 위한 클래스
-- 
+- 네트워크를 구성하는 다양한 함수 지원.
+- 네임스페이스
+  - using Photon.Pun : 유니티용 포톤 컴포넌트들
+  - using Photon.Realtime : 포톤 서비스 관련 라이브러리
+- MonoBehaviourPunCallbacks를 상속받는다.
+- 하단 구성 예시에 사용한 함수 외에도 다양한 기능을 지원하므로 공식문서 참조.
 
-
-
-
-
+## 로비 구성 예시
 ```cs
 using Photon.Pun; 
-// 유니티용 포톤 컴포넌트들
 using Photon.Realtime; 
-// 포톤 서비스 관련 라이브러리
 using UnityEngine;
 using UnityEngine.UI;
 
