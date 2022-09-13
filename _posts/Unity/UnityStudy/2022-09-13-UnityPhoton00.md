@@ -33,3 +33,7 @@ last_modified_at: 2022-09-13
   - 해당 포스팅에선 Free버전 기준 작성
 - 유니티 Import 
 
+## 유니티 내부 설정
+- ![04](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/2022-09-13-UnityPhoton00_04.png?raw=true)
+- Appld or Email에 복사해둔 애플리케이션ID 붙여넣기 후 Setup Project
+
