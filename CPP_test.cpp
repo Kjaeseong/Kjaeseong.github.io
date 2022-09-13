@@ -1,5 +1,4 @@
 #include <iostream>
-#include <string>
 using namespace std;
 
 int main()
@@ -9,24 +8,31 @@ int main()
 
     for(int i = 0; i < Testcase; i++)
     {
-        string ox;
-        cin >> ox;
+        int Students;
+        cin >> Students;
 
-        int Score = 0;
-        int Count = 1;
-        for(int j = 0; j < ox.size(); j++)
+        int Score[1000];
+        float Average = 0;
+        for(int j = 0; j < Students; j++)
         {
-            if(ox[j] == 'O')
+            cin >> Score[j];
+            Average += Score[j];
+        }
+        Average /= Students;
+
+        int Count = 0;
+        for(int j = 0; j < Students; j++)
+        {
+            if(Score[j] > Average)
             {
-                Score += Count;
                 Count++;
             }
-            else
-            {
-                Count = 1;
-            }
         }
-
-        cout << Score << "\n";
+    
+        cout << (float)(Count / Students) * 100 << "\n";
     }
+
+
+
+
 }
