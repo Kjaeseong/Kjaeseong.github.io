@@ -1,5 +1,5 @@
 ---
-title: "(작성중)Photon을 이용한 Unity게임 서버 구축_01 : 로비 구축" 
+title: "Photon을 이용한 Unity게임 서버 구축_01 : 로비 구축" 
 
 categories:
   - UnityStudy
