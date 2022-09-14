@@ -1,5 +1,5 @@
 ---
-title: "(번호미정)Photon을 이용한 Unity게임 서버 구축_02 : Photon Network 동기화" 
+title: "Photon을 이용한 Unity게임 서버 구축_02 : Photon Network 동기화" 
 
 categories:
   - UnityStudy
