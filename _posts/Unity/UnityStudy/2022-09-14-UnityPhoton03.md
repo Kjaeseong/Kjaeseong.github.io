@@ -1,5 +1,5 @@
 ---
-title: "(번호미정)Photon을 이용한 Unity게임 서버 구축_00 : 플레이어 입력과 움직임" 
+title: "Photon을 이용한 Unity게임 서버 구축_03 : 플레이어 입력과 움직임" 
 
 categories:
   - UnityStudy
