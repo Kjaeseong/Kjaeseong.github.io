@@ -33,7 +33,7 @@ last_modified_at: 2022-09-14
   - 동기화 할 컴포넌트 입력
   - 동기화 할 데이터들을 관찰. 다른 클라이언트로 보낸다
 
-## RPC(Remote Procedure Calls)
+### RPC(Remote Procedure Calls)
 - 원격으로 함수 호출시 사용
 - 같은 PhotonView 컴포넌트를 지닌 객체의 함수를 실행할 수 있다.
 - 원격으로 호출할 함수 선언시 [PunRPC] 를 붙인다.
@@ -69,3 +69,60 @@ void Say()
   Pv.RPC("Yeah", RpcTarget.All);
 }
 ```
+
+#### RPC()
+
+```cs
+void RPC(string mathodName, Player targetPlayer, params object[] parameters)
+```
+
+- 특정 플레이어에게만 전송
+- 귓속말 등에 사용
+
+### Destroy()
+
+```cs
+PhotonNetwork.Destroy(gameObject);
+```
+
+- 오브젝트의 파괴(삭제)는 모든 클라이언트에서 동기화되어야 한다.
+
+### Instantiate
+
+```cs
+public GameObject Item; 
+
+void CreateItem()
+{
+  PhotonNetwork.Instantiate(Item.name, Position, Quaternion.identity);
+}
+```
+
+- 오브젝트의 생성은 모든 클라이언트에서 동기화되어야 한다.
+
+## 직렬화
+- `PhotonPeer.RegisterType()`
+- 직렬화 기본 지원 타입
+  - 포톤
+    - Byte
+    - bool
+    - short
+    - int
+    - long
+    - float
+    - double
+    - string
+    - Object[]
+    - byte[]
+    - array(array of type T, T[])
+    - Hashtable
+    - Dictionary<Object, Object>
+    - Dictionary<Object, V>
+    - Dictionary<K, Object>
+    - Dictionary<K, V>
+  - 유니티 자체지원
+    - Vector2
+    - Vector3
+    - Quaternion
+    - Photon.Realtime.Player
+- 직렬화 지원 타입에 포함되지 않는 경우 직접 구현해야 한다
