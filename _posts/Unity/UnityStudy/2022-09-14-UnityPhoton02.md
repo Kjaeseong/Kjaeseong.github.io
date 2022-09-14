@@ -14,11 +14,17 @@ last_modified_at: 2022-09-14
 ---
 
 # Photon을 이용한 Unity게임 서버 구축_02 : Photon Network 동기화
+- 동기화 할 오브젝트에 `PhotonView` 컴포넌트가 무조건 붙어 있어야 한다.
+- `IPunObservable`인터페이스를 구현한 컴포넌트에 대해서만 동기화 제공
+- 포톤에서 기본적으로 `Transform`, `Rigidbody`, `Animator` 지원
+  - 스스로 만든 컴포넌트의 동기화가 필요하다면 
+  - `IPunObservable`구현
+  - `OnPhotonSerializeView`에서 오버라이드 
 
 ## PhotonVeiew
-- 포톤 네트워크 환경에서 PhotonView 컴포넌트를 통해 동기화 진행
-- PhotonView는 자신의 오브젝트를 관측. 다른 클라이언트에 전달한다.
-- PhotonView로 상대 클라이언트의 정보를 전달받는다.
+- 포톤 네트워크 환경에서 `PhotonView` 컴포넌트를 통해 동기화 진행
+- `PhotonView`는 자신의 오브젝트를 관측. 다른 클라이언트에 전달한다.
+- `PhotonView`로 상대 클라이언트의 정보를 전달받는다.
 - ![00](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/2022-09-14-UnityPhoton00.png?raw=true)
   - P2P서버 예시의 PhotonView
 
@@ -35,9 +41,9 @@ last_modified_at: 2022-09-14
 
 ### RPC(Remote Procedure Calls)
 - 원격으로 함수 호출시 사용
-- 같은 PhotonView 컴포넌트를 지닌 객체의 함수를 실행할 수 있다.
+- 같은 `PhotonView` 컴포넌트를 지닌 객체의 함수를 실행할 수 있다.
 - 원격으로 호출할 함수 선언시 [PunRPC] 를 붙인다.
-- 호출시 두번째 변수(RpcTarget)로 대상 지정 가능
+- 호출시 두번째 변수(`RpcTarget`)로 대상 지정 가능
 
 | 대상 지정                | 설명                                                                                                    |
 |----------------------|-------------------------------------------------------------------------------------------------------|
