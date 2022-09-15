@@ -13,7 +13,7 @@ date: 2022-09-13
 last_modified_at: 2022-09-13
 ---
 
-# Unity 게임 서버 구축(Photon) 01 : 로비 구축
+# Unity 게임 서버 구축(Photon) 00 : 환경 구축
 
 ## Photon 서비스 가입
 - 1. [Photon 홈페이지 가입](https://www.photonengine.com/ko-KR/Photon)
