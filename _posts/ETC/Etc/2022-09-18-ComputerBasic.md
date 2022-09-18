@@ -1,5 +1,5 @@
 ---
-title: "게임기초수학_벡터" 
+title: "컴퓨터 프로그래밍에 대한 이해" 
 
 categories:
   - Etc
@@ -53,4 +53,28 @@ last_modified_at: 2022-09-18
   - 스택(Stack) : *정적 할당 영역
     - *정적 : 프로그램 실행 전
     - *동적 : 프로그램 실행 중
-- ![Memory]()
+- ![Memory](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/2022-09-18-ComputerBasic_00.png?raw=true)
+
+## 프로그래밍 도구
+- 텍스트 에디터 : 코드 작성을 위한 입력기
+- 컴파일러 : 코드를 컴퓨터가 이해할 수 있는 명령어로 변환
+- 디버거 : 버그를 고칠 수 있도록 여러가지 기능 제공
+
+### IDE(Intergrated Development Environment) 통합개발환경
+- 프로그래밍 도구에 기재된 여러 도구를 하나의 프로그램으로 만든 것
+  - Ex> Visual Studio, VS Code, Android Studio 등..
+
+## 빌드
+- 코드를 바탕으로 프로그램을 만드는 과정
+- 빌드과정
+  - 전처리 : 컴파일 이전에 일어나는 일들
+  - 컴파일 : 작성 코드를 어셈블리어로 변환
+  - 어셈블 : 어셈플리어를 CPU가 이해할 수 있는 기계어로 변환하는 과정
+    - 어셈블 이후 목적파일(Object File) 생성
+  - 링크 : 각 목적 파일을 연결해 하나로 묶어 실행파일(Executable File)로 만드는 과정
+
+### 오류에 대한 이해
+- 에러의 원인과 해결책을 신속히 파악하기 위해 필수적
+  - 컴파일 에러(Compile Error) : 가장 찾기 쉬운 에러. 문법오류가 발생한것
+  - 링크 에러(Link Error) : 링크 과정중 발생한 에러. 어떤 이름에 대한 충분한 정보가 없을 때 발생
+  - 런타임 에러(Runtime Error) : 실행 시간에 발생한 에러, 버그가 발생한 것이며 가장 찾기 어렵다
