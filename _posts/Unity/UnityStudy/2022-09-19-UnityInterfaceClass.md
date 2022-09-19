@@ -13,75 +13,67 @@ date: 2022-09-19
 last_modified_at: 2022-09-19
 ---
 
-# 추상클래스
-- 추상클래스의 사용 방법 숙지
-- 추상클래스를 적절히 사용할 줄 안다.
+# 인터페이스
+- 인터페이스의 사용 방법 숙지
+- 인터페이스를 적절히 사용할 줄 안다.
 
-## 추상클래스(abstract class)
-- 인스턴스(객체)를 만들 수 없다.
-- 상속받은 클래스에서 추상클래스의 함수의 세부내용을 구현한다.
-  - 파생클래스에서 상속받아 오버라이딩(Overring) 한다.
-  - 메서드에 내용이 추가되지 않는다.
-  - 즉, 함수의 껍데기만 구현한다.
+## 인터페이스(abstract class)
+- 코드 재사용을 위해 사용
+- 상속받는 클래스들이 필수로 가지고 있어야 하고, 이름은 같지만 다른 기능이 구현되어야 할 때 사용
+- 자식 클래스는 인터페이스의 함수나 프로퍼티를 ***반드시 재정의*** 해야 한다.
+  - 반드시 재정의 하므로 함수는 선언만 한다.
   - 컴포넌트로서 오브젝트에 붙일 수 없다.
-- 데이터(필드)도 가질 수 있다.
-- 추상 클래스를 상속받는 자식 클래스에 접근할 수 있다.
+  - 자식 클래스에서 반드시 재정의하고, 이 함수를 가지도록 강제한다.
+  - 재정의 하지 않으면 에러 발생
+- 멤버 변수는 가질 수 없다.
+- 다중상속 가능
+  - C#은 기본적으로 다중상속을 지원하지 않는다.
+- 클래스명 앞에 기본적으로 I를 붙인다.
 
 ```cs
-// Human.cs
-// Human 추상클래스
-public abstract class Human : MonoBehaviour
+// IAnimal.cs
+public interface IAnimal
 {
-  public abstract void Eat();
+  void Eat();
+
+  void Sleep();
 }
 
-// Minsu.cs
-// Human 을 상속받는 클래스
-public class Minsu : Human
+
+// Human.cs
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Human : MonoBehaviour, IAnimal
 {
-  public float HP = 0f;
-
-  private void update()
-  {
-    Eat();
-  }
-
-  // 추상클래스 Human의 함수 오버라이딩
   public override void Eat()
   {
-    HP += 50f;
+    Debug.Log("밥");
   }
-}
-```
 
-```cs
-// Beast.cs
-// Beast 추상클래스
-public abstract class Beast : MonoBehaviour
-{
-  // 데이터(필드)까지 상속 가능
-  public float Damage = 10f;
-
-  public void update()
+  public override void Sleep()
   {
-    if(Input.GetKeyDown(KeyCode.Space))
-    {
-      Bite();
-    }
+    Debug.Log("8시간 잠");
   }
-
-  public abstract void Bite();
 }
 
-// Wolf.cs
-// 추상클래스 Beast에서 update() 이벤트 함수까지 상속 받는 클래스
-public class Wolf : Beast
+// Dog.cs
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Dog : MonoBehaviour, IAnamal
 {
-  public override void Bite()
+  public override void Eat()
   {
-    Debug.Log("Bite!");
+    Debug.Log("사료");
+  }
+
+  public override void Sleep()
+  {
+    Debug.Log("2시간 잠");
   }
 }
+
 ```
-
-

@@ -18,6 +18,7 @@ last_modified_at: 2022-09-19
 - 추상클래스를 적절히 사용할 줄 안다.
 
 ## 추상클래스(abstract class)
+- 코드 재사용을 위해 사용
 - 인스턴스(객체)를 만들 수 없다.
 - 상속받은 클래스에서 추상클래스의 함수의 세부내용을 구현한다.
   - 파생클래스에서 상속받아 오버라이딩(Overring) 한다.
@@ -27,8 +28,14 @@ last_modified_at: 2022-09-19
 - 데이터(필드)도 가질 수 있다.
 - 추상 클래스를 상속받는 자식 클래스에 접근할 수 있다.
 
+## 구현 예시
+
 ```cs
 // Human.cs
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
 // Human 추상클래스
 public abstract class Human : MonoBehaviour
 {
@@ -36,6 +43,10 @@ public abstract class Human : MonoBehaviour
 }
 
 // Minsu.cs
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
 // Human 을 상속받는 클래스
 public class Minsu : Human
 {
@@ -56,6 +67,10 @@ public class Minsu : Human
 
 ```cs
 // Beast.cs
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
 // Beast 추상클래스
 public abstract class Beast : MonoBehaviour
 {
@@ -74,6 +89,10 @@ public abstract class Beast : MonoBehaviour
 }
 
 // Wolf.cs
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
 // 추상클래스 Beast에서 update() 이벤트 함수까지 상속 받는 클래스
 public class Wolf : Beast
 {
