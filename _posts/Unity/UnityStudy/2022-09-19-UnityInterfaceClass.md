@@ -45,8 +45,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// IAnimal을 상속받는 Human Class
+// MonoBehaviour와 다중상속
 public class Human : MonoBehaviour, IAnimal
 {
+  // 인터페이스에 정의된 함수 및 프로퍼티 '반드시' 재정의
   public override void Eat()
   {
     Debug.Log("밥");
