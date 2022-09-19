@@ -78,5 +78,4 @@ public class Dog : MonoBehaviour, IAnamal
     Debug.Log("2시간 잠");
   }
 }
-
 ```
