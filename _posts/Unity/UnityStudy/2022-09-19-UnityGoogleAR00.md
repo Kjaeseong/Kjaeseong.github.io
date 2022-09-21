@@ -1,0 +1,181 @@
+---
+title: "GoogleAR을 사용한 Unity AR컨텐츠 개발" 
+
+categories:
+  - UnityStudy
+
+toc: true
+toc_sticky: true
+
+use_math: false
+
+date: 2022-08-15
+last_modified_at: 2022-08-15
+---
+
+# 유니티 엔진에 대한 이해
+
+## [Unity Editor](https://docs.unity3d.com/kr/2021.3/Manual/index.html)
+
+### [유니티 인터페이스](https://docs.unity3d.com/kr/2021.3/Manual/UsingTheEditor.html)
+- 대표적인 인터페이스 항목
+  - Toolbar
+  - Hierarchy Window
+  - Game View
+  - Scene View
+  - Overlays
+  - Inspector Window
+  - Project Window
+  - Status Bar
+- 이 외의 UI는 Window 메뉴에서 열 수 있다
+
+### [Scene](https://docs.unity3d.com/kr/2021.3/Manual/CreatingScenes.html)
+- 컨텐츠를 사용해 작업하는 공간
+- 게임이나 애플리케이션의 전체 또는 일부를 포함하느 에셋(Asset)
+- 스크립트에서는 SceneManager를 이용해 씬 로드 가능
+
+### [GameObject](https://docs.unity3d.com/kr/2021.3/Manual/GameObjects.html)
+- 유니티에 존재하는 모든 오브젝트(요소)
+- 기능을 구현하는 컴포넌트의 컨테이너 역할을 한다
+- 그 자체로 기능이 구현되진 않는다
+- 게임 오브젝트의 좌표는 [Transform](https://docs.unity3d.com/kr/2021.3/Manual/class-Transform.html) 컴포넌트로 표현된다
+  - 모든 게임오브젝트는 Transform을 가진다
+  - Transform은 좌표계에서 위치, 회전, 스케일 표현
+- 계층적으로 다른 GameObject를 가질 수 있다(부모-자식 관계)
+  - 부모 오브젝트를 가질 시, Transform은 부모로부터의 상대적인 좌표를 나타낸다(Local 좌표)
+  - 부모가 없는 경우 World 좌표
+- 변화가 없는 GameObject는 Static으로 설정
+  - 최적화시 상당한 도움이 된다.
+  - 반대를 Dynamic GameObject
+- 프로토타입을 만들 때 사용하는 Primitive GameObejct가 있다.
+  - Cube / Sphere / Capsule / Plain / Quad / Cylinder
+
+### [Component](https://docs.unity3d.com/kr/2021.3/Manual/Components.html)
+- GameObject의 기능적인 단위(하나의 기능을 담당하는 스크립트)
+  - 시각 / 물리 / 행위의 기능 등..
+- 유니티는 다양한 컴포넌트를 내재하고 있다.
+  - [Scripting API](https://docs.unity3d.com/kr/2021.3/ScriptReference/index.html) 참조
+- 개인만의 컴포넌트를 작성하기 위해 C# 문법을 알아야 한다.
+  - public Field의 경우 Unity Editor 상에서 인터페이스로 나타난다.
+  - 혹은 [SerializedField] 특성을 사용
+- 모든 Component는 MonoBehaviour를 상속받는다.
+  - MonoBehaviour에는 유니티 엔진에 의해 호출되는 여러 이벤트의 메시지가 정의되어 있다.
+  - Awake() -> OnEnable() -> Start() -> FixedUpdate() -> Update() -> LateUpdate() -> OnDisable() -> OnDestroy()
+  - 각 이벤트의 메시지가 언제 호출되는지 알아야 정확한 구현 가능.
+
+### Input
+- Input Manager : 유니티에 내장된 기본 입력 방법
+- Input System : 추가 패키지(최근 선호도 높음)
+
+### Interaction(Collision)
+- Layer : 게임 오브젝트가 어떤 다른 것과 상호작용 할 수 있는지 정의
+  - [레이어 기반 충돌 감지](https://docs.unity3d.com/kr/2021.3/Manual/LayerBasedCollision.html)
+  - Layer Matrix 설정 방법 알아야 함
+  - 레이어 체크는 비트 사용
+  - 0 ~ 31번까지 사용 가능
+- Character Control 
+  - Rigidbody : 물리 기능을 제공하는 컴포넌트
+    - 힘과 관련된 기능 제공.
+    - Collider와 함께 사용해 충돌 처리에 사용
+    - Kinematic Rigidbody : 물리 엔진 대신 스크립트에 의해서 동작하는 Rigidbody
+    - 최상위 게임 오브젝트에 단 하나만 부착해야 한다.
+  - Character Controller
+  - 게임 플레이 설계에 따라 다르게 적용한다.
+- Collider : 물리적인 표면을 제공하는 Component
+  - Box / Sphere / Capsule
+  - 하나의 게임오브젝트에 여러 개의 콜라이더를 부착할 수 있다.
+  - Rigidbody 없이도 Collider를 부착할 수 있으며, 이를 Static Collider라 한다.
+  - 다른 Collider의 진입을 허용하려면 Trigger로 만들면 된다.
+  - Trigger : 다른 Collider 영역에 들어간 것을 검출할 수 있는 것. 충돌 검출만 감지(통과 가능)
+- Event : 콜라이더에 의해 충돌이 발생할 때 호출되는 이벤트 메시지 존재
+  - OnCollision[Enter/Exit/stay]
+  - Ragdoll
+- 스크립트를 이용한 상호작용
+  - Raycast
+  - Overlap
+
+### Coroutine
+- 시간에 기반한 동작을 편하게 구현할 수 있는 서브루틴(함수)
+  - StartCoroutine()으로 시작
+  - StopCoroutine()으로 중지
+  - 코루틴은 반드시 GameObject가 Active여야 한다.
+  - Update() 이후에 실행된다.
+
+### Animation
+- 유한상태머신 기계로 애니메이션을 구현
+- 유니티에서는 이런 시스템 자체를 메카님 이라 한다
+- 각 상태에 따른 동작을 StateMachineBehaviour
+  - 5가지 추상 메서드 제공
+- Animation Event를 통해 애니메이션 실행 중 특정 시점에 메소드를 호출할 수 있다.
+
+### Audio
+- Audio Source : 소리를 발생시키는 컴포넌트
+- Audio Listener : 소리를 듣는 컴포넌트
+
+### UGUI
+- canvas
+  - UI를 배치하는 컴포넌트
+  - 모든 UI 오브젝트는 canvas의 자식으로 존재해야 한다.
+  - Render Mode에 대한 이해가 필요
+    - Screen Space - Overlay : 스크린 공간에 덧씌워지는 UI, 메인 UI를 표현하는데 사용
+    - Screen Space - Camera : 특정 카메라로부터 일정 거리에 배치된 UI
+    - World Space : 가상세계에 배치되는 UI
+- RectTransform
+  - canvas 상에서의 위치, 너비, 높이, 앵커, 비봇, 스케일, 회전 등을 포현하는 컴포넌트
+- Layout
+  - Layout Group : Layout Element를 관리하며 Layout을 구성하는 컴포넌트
+  - Layout Element : 구성요소
+- Visual Component
+  - 단순히 정보를 제공하는 UI
+  - Text / Image
+- Interactive Component
+  - 유저와 상호작용할 수 있는 UI
+  - Button / Toggle / Toggle Group / Slider / ScrollBar / Dropdown / Input Field / Scroll View
+
+### Prefab
+- 재사용 가능한 GameObject
+- Scene에 동일한 GameObject를 배치하거나, 프로그램 실행 중 인스턴스화 할 때 사용
+
+### Resources Management
+- Resources API
+  - Resources 라는 특정 폴더에 있는 여러 에셋을 불러올 수 있다
+  - 최적화 이슈로 현재는 사용되지 않는다.
+    - 빌드된 프로그램의 크기가 커져서 권장하지 않는다.
+- Adressable System
+
+### Scriptable Object
+- 공통된 데이터에 대해 단 하나의 인스턴스만 만들 때 사용
+
+## Tip
+- Unity GC
+  - 압축이 일어나지 않아 메모리 단편화가 발생하기 쉽다.
+  - 참조 타입의 객체를 생성할 때는 항상 주의해야 한다.
+    - Object Pooling으로 사용할 객체를 미리 생성해두고 재사용한다.
+    - Object Pooling은 Ver.2021 이후 유니티 정식 지원. 이전 버전에서는 직접 구현한다.
+- Hash값 사용하기
+  - Animator나 Material 사용 시 해시값 사용
+    - Animator.StringToHash
+- UnityEngine.Object 서브 클래스에 대해서 Null 체크 되도록 피하기
+  - Update()처럼 반복적으로 호출되는 메소드에서 Null체크 하지 않도록 주의
+- Attribute
+  - Header
+  - SerializeField
+  - Conditional
+
+```cs
+public static class Logger {
+  [Conditional("Debug")]
+  public static void LogToInfo() => Debug.Log("gg");
+}
+```
+
+  - RequireComponent
+  - ContextMenu
+  - Space
+  - Tooltip
+  - TextArea
+  - Range
+  - CreateAssetMenu
+- 최적화 관련
+  - C# job System
+
