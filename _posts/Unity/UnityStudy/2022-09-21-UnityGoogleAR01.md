@@ -72,4 +72,40 @@ last_modified_at: 2022-09-21
 | 개발 중            | Mono + 32Bit (ARMv7) 사용<br/>FAT (32Bit + 64Bit) ARCore APK 설치                                                                                  |
 | PlayStore 업로드 시 | IL2CPP 사용<br/>32비트 (ARMv7) 및 64비트 (ARM64)를 모두 사용 설정해 Play 스토어 64비트 요구사항 충족<br/>선택사항 (2018.3 이상 지원): Build Settings - Android App Bundles 사용 설정 |
 
+## ARCore 확장 프로그램 패키지 설치
+
+### 번들 종속 항목
+- ![07]()
+- Window -> Package Manager
+- '+' 버튼 클릭, Add package from git URL... 선택
+- URL 입력 `https://github.com/google-ar/arcore-unity-extensions.git`
+- ARCore Extensions 설치시 필요한 종속 항목 자동설치
+  - AR Foundation
+  - ARCore XR Plugin(Android 대상)
+  - ARKit XR Plugin(IOS 대상)
+  - 종속 항목은 Package Manager -> Package: In project 뷰에 표시되지 않을 수 있음
+  - 패키지는 Project창 Packages아래 표시되어있으면
+
+## ARCore 확장 프로그램 설정
+- ![08]()
+- Hierarchy 창에서 다음 게임 객체 추가
+  - AR Session
+  - AR Session Origin
+  - ARCore Extensions
+- ![09]()
+- 
+
+  
+ 
+
+
+
+
+
+
+
+
+
+
+
 
