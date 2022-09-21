@@ -17,12 +17,32 @@ last_modified_at: 2022-09-21
 - [공식문서 링크](https://developers.google.com/ar/develop)
 
 ## AR Foundation 설치
-- ![00]()
+- ![00](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/2022-09-21-UnityGoogleAR01_00.png?raw=true)
 - Create Unity Project
   - 내장, 범용 렌더링 파이프라인 모두 AR Foundation 호환
   - 단, URP 구성하려면 [추가단계](https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@4.2/manual/ar-camera-background-with-scriptable-render-pipeline.html) 구성 필요.
 - Package Manager 실행
 - Unity Registry 목록 조회
 - AR Foundation 조회 및 설치
+
+## 플랫폼별 플러그인 패키지 설치/설정
+- AR Foundation패키지는 개발자 사용 인터페이스는 제공하지만 AR기능 자체를 구현하지는 않는다.
+- 별도 패키지 설치 및 해당 플러그인 사용설정 필요.
+
+### Android
+- ![01]()
+- ![02]()
+- Package Manager 실행
+- Unity Registry 목록 조회
+- ARCore XR 플러그인 조회 및 설치
+- Edit -> Project Settings -> XR Plug-in Management -> Android Tab
+  - ARCore Check
+
+## AR 세션 구성, 기초 구성요소 추가
+- ![03]()
+- AR Session : AR환경의 수명 주기 제어
+- AR Session Origin : AR 좌표를 Unity World 좌표로 변환
+- Main Camera 삭제
+- Hierarchy Window -> 우클릭 -> XR -> AR Session, AR Session Origin 객체 추가
 
 
