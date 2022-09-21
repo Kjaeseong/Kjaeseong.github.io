@@ -75,7 +75,7 @@ last_modified_at: 2022-09-21
 ## ARCore 확장 프로그램 패키지 설치
 
 ### 번들 종속 항목
-- ![07]()
+- ![07](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/2022-09-21-UnityGoogleAR01_07.png?raw=true)
 - Window -> Package Manager
 - '+' 버튼 클릭, Add package from git URL... 선택
 - URL 입력 `https://github.com/google-ar/arcore-unity-extensions.git`
@@ -87,7 +87,8 @@ last_modified_at: 2022-09-21
   - 패키지는 Project창 Packages아래 표시되어있으면
 
 ## ARCore 확장 프로그램 설정
-- ![08]()
+
+- ![08](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/2022-09-21-UnityGoogleAR01_08.png?raw=true)
 - Hierarchy 창에서 다음 게임 객체 추가
   - AR Session
   - AR Session Origin
@@ -96,10 +97,13 @@ last_modified_at: 2022-09-21
   - Session: AR Session
   - Session Origin: AR Session Origin
   - Camera Manager: AR Camera
-- 필요시
-- ![09]()
+- 필요시 클래우드 앵커 및 카메라 구성 필터에 대해 다음 에셋 생성 및 연결
+- Project Window ->
+  - ARCore Extensions Config
+  - Camera Config Filter
+- ![09](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/2022-09-21-UnityGoogleAR01_09.png?raw=true)
 - 
-
+- ![10](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/2022-09-21-UnityGoogleAR01_10.png?raw=true)
   
  
 
