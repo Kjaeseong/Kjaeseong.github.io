@@ -1,5 +1,5 @@
 ---
-title: "Unity GoogleAR컨텐츠 개발_00" 
+title: "Unity GoogleAR컨텐츠 개발_제원" 
 
 categories:
   - UnityStudy
@@ -9,8 +9,8 @@ toc_sticky: true
 
 use_math: false
 
-date: 2022-08-15
-last_modified_at: 2022-08-15
+date: 2022-09-21
+last_modified_at: 2022-09-21
 ---
 
 # Unity GoogleAR 컨텐츠 개발_00
@@ -21,7 +21,7 @@ last_modified_at: 2022-08-15
   - 흰색 벽 같은 평평한 표면은 인식률이 낮을 수 있음
 - 조명 추정 : 카메라 이미지 평균 강도/색상보정
 
-## 지원 사양
+## 지원 사양(갤럭시, 아이폰 기준)
 - Android 7.0(Nougat) 이상
 - Samsung Galaxy A3(2017) 이상
 - Apple Iphone 6S 이상
@@ -39,4 +39,3 @@ last_modified_at: 2022-08-15
 - 평평한 표면 감지
   - 주변 영역 광원 추정
 - 오브젝트 배치
-- 
