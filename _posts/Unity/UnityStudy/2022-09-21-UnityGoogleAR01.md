@@ -48,19 +48,21 @@ last_modified_at: 2022-09-21
 ## 플레이어 설정 구성
 
 ### Android
-![04]()
-![05]()
+![04](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/2022-09-21-UnityGoogleAR01_04.png?raw=true)
+![05](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/2022-09-21-UnityGoogleAR01_05.png?raw=true)
+![06](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/2022-09-21-UnityGoogleAR01_06.png?raw=true)
 - File -> Build Settings -> Platform -> Android -> Switch Platform 클릭
-- Player
-  - Other Settings ->
-    - Rendering -> Auto Graphics API 선택 해제 -> Vulkan이 표시되어있으면 삭제
-    - Package Name -> 자바 패키지 이름 형식 사용. 고유 앱ID 생성
-      - Ex> com.example.helloAR
-    - Minimum API Level -> 
-      - AR필수 앱의 경우 Android 7.0 'Nougat(API Level 24) or higher 지정
-      - AR선택 앱의 경우 Android API Level 19 or higher 지정
-    - Scripting Backend ->
-      - ARM64 지원시 IL2CPP 선택
-    - Target Architectures ->
-      - Google Play 64비트 요구사항 충족하려면 ARM64(64비트 ARM) 사용 설정. 
-      - 32비트 기기를 지원시 ARMv7 (32비트 ARM) 사용 설정
+- Player Settings
+  - Player
+    - Other Settings ->
+      - Rendering -> Auto Graphics API 선택 해제 -> Vulkan이 표시되어있으면 삭제
+      - Package Name -> 자바 패키지 이름 형식 사용. 고유 앱ID 생성
+        - Ex> com.example.helloAR
+      - Minimum API Level -> 
+        - AR필수 앱의 경우 Android 7.0 'Nougat(API Level 24) or higher 지정
+        - AR선택 앱의 경우 Android API Level 19 or higher 지정
+      - Scripting Backend ->
+        - ARM64 지원시 IL2CPP 선택
+      - Target Architectures ->
+        - Google Play 64비트 요구사항 충족하려면 ARM64(64비트 ARM) 사용 설정. 
+        - 32비트 기기를 지원시 ARMv7 (32비트 ARM) 사용 설정
