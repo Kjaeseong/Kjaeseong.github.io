@@ -17,6 +17,8 @@ last_modified_at: 2022-09-21
 
 ## AR Foundation 설치
 - ![00]()
+- Create Unity Project
 - Package Manager 실행
 - Unity Registry 목록 조회
 - AR Foundation 조회 및 설치
+
