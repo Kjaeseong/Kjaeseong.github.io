@@ -92,6 +92,11 @@ last_modified_at: 2022-09-21
   - AR Session
   - AR Session Origin
   - ARCore Extensions
+- Inspector Window에서 다음 필드와 객체 연결
+  - Session: AR Session
+  - Session Origin: AR Session Origin
+  - Camera Manager: AR Camera
+- 필요시 
 - ![09]()
 - 
 
