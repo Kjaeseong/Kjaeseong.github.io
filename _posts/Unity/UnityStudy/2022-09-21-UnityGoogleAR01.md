@@ -63,12 +63,13 @@ last_modified_at: 2022-09-21
         - AR선택 앱의 경우 Android API Level 19 or higher 지정
       - Scripting Backend ->
         - ARM64 지원시 IL2CPP 선택
+      - Target Architectures ->
+        - Google Play 64비트 요구사항 충족하려면 ARM64(64비트 ARM) 사용 설정. 
+        - 32비트 기기를 지원시 ARMv7 (32비트 ARM) 사용 설정
 
-| 항목              | 설명                                                                                                                                             |
+| Scripting Backend              | 설명                                                                                                                                             |
 |-----------------|------------------------------------------------------------------------------------------------------------------------------------------------|
 | 개발 중            | Mono + 32Bit (ARMv7) 사용<br/>FAT (32Bit + 64Bit) ARCore APK 설치                                                                                  |
 | PlayStore 업로드 시 | IL2CPP 사용<br/>32비트 (ARMv7) 및 64비트 (ARM64)를 모두 사용 설정해 Play 스토어 64비트 요구사항 충족<br/>선택사항 (2018.3 이상 지원): Build Settings - Android App Bundles 사용 설정 |
 
-      - Target Architectures ->
-        - Google Play 64비트 요구사항 충족하려면 ARM64(64비트 ARM) 사용 설정. 
-        - 32비트 기기를 지원시 ARMv7 (32비트 ARM) 사용 설정
+
