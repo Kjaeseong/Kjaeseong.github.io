@@ -1,5 +1,5 @@
 ---
-title: "(작성중)Unity GoogleAR컨텐츠 개발_환경 구축" 
+title: "Unity GoogleAR컨텐츠 개발_기본 개념" 
 
 categories:
   - UnityStudy
@@ -9,112 +9,72 @@ toc_sticky: true
 
 use_math: false
 
-date: 2022-09-21
-last_modified_at: 2022-09-21
+date: 2022-09-22
+last_modified_at: 2022-09-22
 ---
 
-# Unity GoogleAR 컨텐츠 개발_환경 구축
-- [공식문서 링크](https://developers.google.com/ar/develop)
+# Unity GoogleAR 컨텐츠 개발_기본 개념
+- [공식문서 링크](https://developers.google.com/ar/develop/fundamentals)
 
-## AR Foundation 설치
-- ![00](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/2022-09-21-UnityGoogleAR01_00.png?raw=true)
-- Create Unity Project
-  - 내장, 범용 렌더링 파이프라인 모두 AR Foundation 호환
-  - 단, URP 구성하려면 [추가단계](https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@4.2/manual/ar-camera-background-with-scriptable-render-pipeline.html) 구성 필요.
-- Package Manager 실행
-- Unity Registry 목록 조회
-- AR Foundation 조회 및 설치
+## 기본 개념
 
-## 플랫폼별 플러그인 패키지 설치/설정
-- AR Foundation패키지는 개발자 사용 인터페이스는 제공하지만 AR기능 자체를 구현하지는 않는다.
-- 별도 패키지 설치 및 해당 플러그인 사용설정 필요.
+### 모션 추적
+- 동시 현지화 및 매핑(SLAM) 프로세스 사용
+- 카메라 이미지의 시각적으로 구분되는 '지점'이라는 지형지물을 감지, 위치 변경 계산
+- 저장된 시각적 정보는 기기 IMU에 있는 공기 측정값과 결합, 월드의 상대적인 포즈(위치, 방향)을 추정
 
-### Android
-- ![01](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/2022-09-21-UnityGoogleAR01_01.png?raw=true)
-- ![02](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/2022-09-21-UnityGoogleAR01_02.png?raw=true)
-- Package Manager 실행
-- Unity Registry 목록 조회
-- ARCore XR 플러그인 조회 및 설치
-- Edit -> Project Settings -> XR Plug-in Management -> Android Tab
-  - ARCore Check
+#### SLAM(Simultaneous Localization and Mapping)
+- 센서를 사용해 물리적 세계에서 데이터를 수집하는 프로세스
+- 수집한 데이터를 기반으로 나중에 탐색 할 수 있도록 지도에 생성
+- 시각적 포인트를 통해 데이터 해석, 지도 작성, 동시에 탐색하는데 사용 가능
+- 카메라, 센서를 사용해 자신의 위치를 파악하며 환경을 매핑
 
-## AR 세션 구성, 기초 구성요소 추가
-- ![03](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/2022-09-21-UnityGoogleAR01_03.png?raw=true)
-- AR Session : AR환경의 수명 주기 제어
-- AR Session Origin : AR 좌표를 Unity World 좌표로 변환
-- Main Camera 삭제
-- Hierarchy Window -> 우클릭 -> XR -> AR Session, AR Session Origin 객체 추가
+#### IMU(Inertial Measurement Unit)
+- 관성 측정 장치, 종류에 따라 6축(자이로스코프, 가속도계) 9축(자이로스코프, 가속도계, 지자기센서) 센서까지 있다.
+- 자이로스코프 : 각속도(단위시간당 회전한 각도, rad/s) 측정
+- 가속도계 : 가속도(m/s^2) 측정, 
+  - 초기값 계산시 중력 가속도를 분해, 기울기 측정에 사용
+  - 속도와 이동거리를 가속도를 적분해 사용 가능
+- 지자기 센서 : 지자기(Magnet) 측정, 자이로센서의 오차를 최대한 보정
+  - 자북을 기준으로 자기선속의 서기 측정, 얼마나 틀어졌는지 측정
 
-## 플레이어 설정 구성
+### 환경 이해
+- 지형지물, 평면을 감지해 실제 환경에 관해 지속적으로 데이터 수집
+- 수평, 수직 표면의 특징점의 클러스터 감지, 표면을 기하학적 평면으로 제공
+- ARCore는 기하학적 영역의 경계 결정, 정보를 앱에 전달
+- 특징점을 사용해 평면을 감지하므로, 질감이 없는 평평한 표면은 제대로 감지되지 않을 수 있다.
 
-### Android
-![04](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/2022-09-21-UnityGoogleAR01_04.png?raw=true)
-![05](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/2022-09-21-UnityGoogleAR01_05.png?raw=true)
-![06](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/2022-09-21-UnityGoogleAR01_06.png?raw=true)
-- File -> Build Settings -> Platform -> Android -> Switch Platform 클릭
-- Player Settings
-  - Player
-    - Other Settings ->
-      - Rendering -> Auto Graphics API 선택 해제 -> Vulkan이 표시되어있으면 삭제
-      - Package Name -> 자바 패키지 이름 형식 사용. 고유 앱ID 생성
-        - Ex> com.example.helloAR
-      - Minimum API Level -> 
-        - AR필수 앱의 경우 Android 7.0 'Nougat(API Level 24) or higher 지정
-        - AR선택 앱의 경우 Android API Level 19 or higher 지정
-      - Scripting Backend ->
-        - ARM64 지원시 IL2CPP 선택
-      - Target Architectures ->
-        - Google Play 64비트 요구사항 충족하려면 ARM64(64비트 ARM) 사용 설정. 
-        - 32비트 기기를 지원시 ARMv7 (32비트 ARM) 사용 설정
+### 깊이 이해
+- 기본 카메라를 사용, 주어진 지점 간 거리 관련 데이터 포함 이미지 생성
+- 가상 객체와 관측 표면과의 충돌, 오브젝트가 실제 사물 앞이나 뒤의 위치로 나타내는 기능 지원
 
-| Scripting Backend              | 설명                                                                                                                                             |
-|-----------------|------------------------------------------------------------------------------------------------------------------------------------------------|
-| 개발 중            | Mono + 32Bit (ARMv7) 사용<br/>FAT (32Bit + 64Bit) ARCore APK 설치                                                                                  |
-| PlayStore 업로드 시 | IL2CPP 사용<br/>32비트 (ARMv7) 및 64비트 (ARM64)를 모두 사용 설정해 Play 스토어 64비트 요구사항 충족<br/>선택사항 (2018.3 이상 지원): Build Settings - Android App Bundles 사용 설정 |
+### 광원 추정
+- 환경 조명에 대한 정보 감지
+- 카메라 이미지의 평균 강도와 색상 보정 제공
+- 주변 환경과 동일한 조건에서 가상 객체를 밝힐 수 있다.
 
-## ARCore 확장 프로그램 패키지 설치
+### 사용자 상호작용
+- 터치(클릭) 위치의 좌표 기반으로 레이캐스팅 평면, 특징점 반환
+- 특정 객체를 터치로 선택하거나 상호작용 할 수 있다.
 
-### 번들 종속 항목
-- ![07](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/2022-09-21-UnityGoogleAR01_07.png?raw=true)
-- Window -> Package Manager
-- '+' 버튼 클릭, Add package from git URL... 선택
-- URL 입력 `https://github.com/google-ar/arcore-unity-extensions.git`
-- ARCore Extensions 설치시 필요한 종속 항목 자동설치
-  - AR Foundation
-  - ARCore XR Plugin(Android 대상)
-  - ARKit XR Plugin(IOS 대상)
-  - 종속 항목은 Package Manager -> Package: In project 뷰에 표시되지 않을 수 있음
-  - 패키지는 Project창 Packages아래 표시되어있으면
+### 방향 포인트
+- 주변 지점을 분석해 표면의 각도 추정 포즈 반환
+- 표면의 각도를 감지하므로, 질감이 없는 표면에서 제대로 감지되지 않을 수 있다.
 
-## ARCore 확장 프로그램 설정
+### 앵커 및 추적
+- 평면 및 점은 trackable(추적 가능한) Object라고 불리는 특수한 오브젝트, ARCore가 시간경과에 따라 추적한다
+- 평면 및 점에 오브젝트를 배치, 디바이스 이동 및 회전 시에도 특정 위치에 위치한 것처럼 보이게 한다.
+- CPU 사용량 최적화를 원한다면 앵커를 재사용, 필요하지 않은 앵커를 분리하는것이 좋다.
 
-- ![08](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/2022-09-21-UnityGoogleAR01_08.png?raw=true)
-- Hierarchy 창에서 다음 게임 객체 추가
-  - AR Session
-  - AR Session Origin
-  - ARCore Extensions
-- Inspector Window에서 다음 필드와 객체 연결
-  - Session: AR Session
-  - Session Origin: AR Session Origin
-  - Camera Manager: AR Camera
-- 필요시 클래우드 앵커 및 카메라 구성 필터에 대해 다음 에셋 생성 및 연결
-- Project Window ->
-  - ARCore Extensions Config
-  - Camera Config Filter
-- ![09](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/2022-09-21-UnityGoogleAR01_09.png?raw=true)
-- 
-- ![10](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/2022-09-21-UnityGoogleAR01_10.png?raw=true)
-  
- 
+### 증강 이미지
+- 특정 2D 이미지를 카메라로 주시하면 반응하는 AR앱 생산
+  - 이미지를 오프라인으로 컴파일 하여 이미지 데이터베이스 생산 가능
+  - 개별 이미지 실시간 추가 가능
 
-
-
-
-
-
-
-
-
-
+### 공유 및 네트워크
+- ARCore Cloud Anchor API 사용시 안드로이드, IOS용 멀티플레이 앱 생산
+- Cloud앵커 사용시 디바이스가 앵커 및 인근 특징점을 클라우드로 전송, 호스팅한다.
+  - 동일 환경의 다른 디바이스에서 공유받을 수 있다.
+  - 다수의 사용자가 동시에 동일한 AR기능을 사용 가능
 
 
