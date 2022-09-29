@@ -1,5 +1,5 @@
 ---
-title: "(작성중)Unity GoogleAR컨텐츠 개발_환경 구축" 
+title: "Unity GoogleAR컨텐츠 개발_앵커" 
 
 categories:
   - UnityStudy
@@ -9,112 +9,71 @@ toc_sticky: true
 
 use_math: false
 
-date: 2022-09-21
-last_modified_at: 2022-09-21
+date: 2022-09-23
+last_modified_at: 2022-09-23
 ---
 
-# Unity GoogleAR 컨텐츠 개발_환경 구축
-- [공식문서 링크](https://developers.google.com/ar/develop)
+# Unity GoogleAR 컨텐츠 개발_기본 개념
+- [공식문서 링크](https://developers.google.com/ar/develop/anchors)
 
-## AR Foundation 설치
-- ![00](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/2022-09-21-UnityGoogleAR01_00.png?raw=true)
-- Create Unity Project
-  - 내장, 범용 렌더링 파이프라인 모두 AR Foundation 호환
-  - 단, URP 구성하려면 [추가단계](https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@4.2/manual/ar-camera-background-with-scriptable-render-pipeline.html) 구성 필요.
-- Package Manager 실행
-- Unity Registry 목록 조회
-- AR Foundation 조회 및 설치
+## 앵커
+- 가상 객체의 위치를 고정하는 틀
+- 가상 객체가 공간 내 동일한 위치와 방향을 유지하도록 한다.
 
-## 플랫폼별 플러그인 패키지 설치/설정
-- AR Foundation패키지는 개발자 사용 인터페이스는 제공하지만 AR기능 자체를 구현하지는 않는다.
-- 별도 패키지 설치 및 해당 플러그인 사용설정 필요.
+### 첫 사용시 검토할 사항
+- 월드 스페이스
+  - 카메라와 객체 배치 포지션
+  - 카메라와 객체 위치는 월드 내에서 프레임 단위 업데이트
+- 포즈
+  - 월드 스페이스에서 객체의 위치와 방향
+  - IOS에서는 Transform이라고 한다.
+- 앵커 생성 시 현재 프레임의 월드스페이스 좌표를 기준으로 방향을 나타내는 포즈 사용.
+- 앵커에 하나 이상의 객체 연결하면 현존 위치에 표시
+- 프레임 단위 업데이트에 따라 포즈가 조정되므로, 앵커가 객체를 업데이트한다.
 
-### Android
-- ![01](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/2022-09-21-UnityGoogleAR01_01.png?raw=true)
-- ![02](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/2022-09-21-UnityGoogleAR01_02.png?raw=true)
-- Package Manager 실행
-- Unity Registry 목록 조회
-- ARCore XR 플러그인 조회 및 설치
-- Edit -> Project Settings -> XR Plug-in Management -> Android Tab
-  - ARCore Check
+## Scene 내 앵커 사용
+- 앵커를 사용하기 위해 코드해서 실행할 사항
+  - Trackable(Ex> Plane) 또는 ARCore 세션의 컨텍스트에서 앵커 생성
+  - 앵커에 객체를 연결
 
-## AR 세션 구성, 기초 구성요소 추가
-- ![03](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/2022-09-21-UnityGoogleAR01_03.png?raw=true)
-- AR Session : AR환경의 수명 주기 제어
-- AR Session Origin : AR 좌표를 Unity World 좌표로 변환
-- Main Camera 삭제
-- Hierarchy Window -> 우클릭 -> XR -> AR Session, AR Session Origin 객체 추가
+### 앵커 컨텍스트 선택
 
-## 플레이어 설정 구성
+| 객체 생성 시                                                                                         | .                 |
+|-------------------------------------------------------------------------------------------------|-------------------|
+| 추적 가능'으로 표시. 추적 가능과 동일한 회전 효과 적용..?<br><br>Plane 표면과 붙은채로 고정하기 위함<br>추적 가능한 위치를 기준으로 한 위치 유지 | 추적 장치에 앵커 부착      |
+| 월드 스페이스에서 동일한 포즈를 유지                                                                            | 앵커를 ARCore 세션에 부착 |
 
-### Android
-![04](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/2022-09-21-UnityGoogleAR01_04.png?raw=true)
-![05](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/2022-09-21-UnityGoogleAR01_05.png?raw=true)
-![06](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/2022-09-21-UnityGoogleAR01_06.png?raw=true)
-- File -> Build Settings -> Platform -> Android -> Switch Platform 클릭
-- Player Settings
-  - Player
-    - Other Settings ->
-      - Rendering -> Auto Graphics API 선택 해제 -> Vulkan이 표시되어있으면 삭제
-      - Package Name -> 자바 패키지 이름 형식 사용. 고유 앱ID 생성
-        - Ex> com.example.helloAR
-      - Minimum API Level -> 
-        - AR필수 앱의 경우 Android 7.0 'Nougat(API Level 24) or higher 지정
-        - AR선택 앱의 경우 Android API Level 19 or higher 지정
-      - Scripting Backend ->
-        - ARM64 지원시 IL2CPP 선택
-      - Target Architectures ->
-        - Google Play 64비트 요구사항 충족하려면 ARM64(64비트 ARM) 사용 설정. 
-        - 32비트 기기를 지원시 ARMv7 (32비트 ARM) 사용 설정
+### 앵커에 객체 연결
+- 앵커에 연결된 객체의 일반적인 공간 관계
+  - 객체끼리
+  - 추적 가능한 요소
+  - 월드스페이스에서의 포지션
 
-| Scripting Backend              | 설명                                                                                                                                             |
-|-----------------|------------------------------------------------------------------------------------------------------------------------------------------------|
-| 개발 중            | Mono + 32Bit (ARMv7) 사용<br/>FAT (32Bit + 64Bit) ARCore APK 설치                                                                                  |
-| PlayStore 업로드 시 | IL2CPP 사용<br/>32비트 (ARMv7) 및 64비트 (ARM64)를 모두 사용 설정해 Play 스토어 64비트 요구사항 충족<br/>선택사항 (2018.3 이상 지원): Build Settings - Android App Bundles 사용 설정 |
+## 앵커 가이드라인
+- 앵커에 연결된 객체들은 서로 상대적인 위치를 유지한다
+- 필요한 앵커만 사용시 CPU효율을 높일 수 있다.
 
-## ARCore 확장 프로그램 패키지 설치
+### 앵커 재사용
+- 각 객체에 대응해 새로운 앵커를 만드는 대신, 주변 객체에 동일한 앵커를 사용해야 한다.
+- 객체가 월드스페이스나 Trackable 위치에 고정된 공간 관계를 유지해야 하는 경우, 객체에 새 앵커를 사용
+- 각 객체마다 앵커가 사용되는 경우, 앵커마다 프레임 업데이트 시 개별적으로 객체 포즈를 조정한다.
+- 개별적인 앵커와 객체는 상대적으로 이동, 회전할 수 있어 위치가 어긋나는 등 AR 일루전이 깨질 수 있다.
 
-### 번들 종속 항목
-- ![07](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/2022-09-21-UnityGoogleAR01_07.png?raw=true)
-- Window -> Package Manager
-- '+' 버튼 클릭, Add package from git URL... 선택
-- URL 입력 `https://github.com/google-ar/arcore-unity-extensions.git`
-- ARCore Extensions 설치시 필요한 종속 항목 자동설치
-  - AR Foundation
-  - ARCore XR Plugin(Android 대상)
-  - ARKit XR Plugin(IOS 대상)
-  - 종속 항목은 Package Manager -> Package: In project 뷰에 표시되지 않을 수 있음
-  - 패키지는 Project창 Packages아래 표시되어있으면
+### 객체를 앵커에 가깝게 유지
+- 앵커에 객체 고정 시 앵커에 가까이 있어야 한다.
+  - 8M(26ft.) 이상 떨어뜨리지 않는다.
+  - 위 범위에서 벗어나야 하는 경우 새 앵커를 생성한다.
 
-## ARCore 확장 프로그램 설정
+### 미사용 앵커 분리
+- 더 이상 필요하지 않는 앵커를 분리한다.
+  - 연산을 줄여 성능 상승을 기대할 수 있다.
+  - 앱 내 Trackable은 CPU 연산 발생.
+  - ARCore는 앵커가 부착된 Trackable을 해제하지 않는다.
 
-- ![08](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/2022-09-21-UnityGoogleAR01_08.png?raw=true)
-- Hierarchy 창에서 다음 게임 객체 추가
-  - AR Session
-  - AR Session Origin
-  - ARCore Extensions
-- Inspector Window에서 다음 필드와 객체 연결
-  - Session: AR Session
-  - Session Origin: AR Session Origin
-  - Camera Manager: AR Camera
-- 필요시 클래우드 앵커 및 카메라 구성 필터에 대해 다음 에셋 생성 및 연결
-- Project Window ->
-  - ARCore Extensions Config
-  - Camera Config Filter
-- ![09](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/2022-09-21-UnityGoogleAR01_09.png?raw=true)
-- 
-- ![10](https://github.com/Kjaeseong/Kjaeseong.github.io/blob/main/_posts/img/2022-09-21-UnityGoogleAR01_10.png?raw=true)
-  
- 
+## 앵커 유형
 
-
-
-
-
-
-
-
-
-
-
-
+| 앵커                                    | 설명                                                                                                                          |
+|---------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
+| 로컬 앵커<br/>(Local anchor)              | 로컬에 앱과 함게 저장<br/>앰의 해당 인스턴스에서만 유효<br/>유저가 앵커를 배치한 위치에 있어야 한다"                                                               |
+| <br/>"클라우드 앵커<br/>(Cloud Anchor)      | 구글 클라우드에 저장<br/>앱 인스턴스간 공유될 수 있다<br/>유저가 앵커를 배치한 위치에 있어야 한다."                                                               |
+| <br/>"지리정보 앵커<br/>(Geospatial anchor) | 위도,경도,고도 및 구글의 VPS데이터 기반<br/>전 세계의 정확한 위치 제공<br/>앵커가 앱 인스턴스간 공유<br/>앱 사용시 인터넷에 연결되어 있고, VPS를 사용할 수 있다면 유저가 원격 위치에 앵커 배치 가능  |
