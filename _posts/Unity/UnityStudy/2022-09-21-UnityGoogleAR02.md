@@ -13,7 +13,7 @@ date: 2022-09-23
 last_modified_at: 2022-09-23
 ---
 
-# Unity GoogleAR 컨텐츠 개발_기본 개념
+# Unity GoogleAR 컨텐츠 개발_앵커
 - [공식문서 링크](https://developers.google.com/ar/develop/anchors)
 
 ## 앵커
