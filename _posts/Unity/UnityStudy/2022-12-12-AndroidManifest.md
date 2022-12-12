@@ -28,7 +28,7 @@ last_modified_at: 2022-12-12
 ```xml
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.unity3d.player" xmlns:tools="http://schemas.android.com/tools">
   <application>
-    <activity android:name="com.unity3d.player.UnityPlayerActivity"
+    <activity android:name="com.unity3d.player.UnityPlayerActivity">
     .
     .
     .
