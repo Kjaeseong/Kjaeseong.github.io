@@ -16,10 +16,10 @@ minimal_mistakes_skin    : "dark" # "default"  "air", "aqua", "contrast", , "dir
 
 # Site Settings
 locale                   : "ko-KR"
-title                    : " JCoder Blog "
+title                    : " JaCo Blog"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "JCoder"
+name                     : "JaCo"
 description              : "공부하는 개발자의 블로그"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -94,7 +94,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "JCoder"
+  name             : "JaCo"
   # avatar           : ""
   bio              : "공부할건 많으니까...\n\n"
   #location         : "Seoul, South Korea"
