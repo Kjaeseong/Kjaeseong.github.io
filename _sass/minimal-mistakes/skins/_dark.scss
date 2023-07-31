@@ -3,9 +3,9 @@
    ========================================================================== */
 
 /* Colors */
-$background-color: #373C3F !default;
-$text-color: #eaeaea !default;
-$primary-color: #00adb5 !default;
+$background-color: #c9c8ac !default;
+$text-color: #5592d7 !default;
+$primary-color: #2e68d4 !default; // 카테고리 제목 및 포인트
 $border-color: mix(#fff, $background-color, 20%) !default;
 $code-background-color: #4D5357 !default;
 $code-background-color-dark: #3F4447 !default;
@@ -26,3 +26,27 @@ $navicon-link-color-hover: mix(#000, $background-color, 30%) !default;
 .ais-search-box .ais-search-box--input {
   background-color: $form-background-color;
 }
+
+// $background-color: #373C3F !default;
+// $text-color: #eaeaea !default;
+// $primary-color: #00adb5 !default;
+// $border-color: mix(#fff, $background-color, 20%) !default;
+// $code-background-color: #4D5357 !default;
+// $code-background-color-dark: #3F4447 !default;
+// $form-background-color: mix(#000, $background-color, 15%) !default;
+// $footer-background-color: mix(#000, $background-color, 20%) !default;
+// $link-color: mix(#00adb5, $text-color, 40%) !default;
+// $link-color-hover: mix(#fff, $link-color, 25%) !default;
+// $link-color-visited: mix(#00adb5, $text-color, 40%) !default;
+// $masthead-link-color: $text-color !default;
+// $masthead-link-color-hover: mix(#000, $text-color, 20%) !default;
+// $navicon-link-color-hover: mix(#000, $background-color, 30%) !default;
+
+// .author__urls.social-icons .svg-inline--fa,
+// .page__footer-follow .social-icons .svg-inline--fa {
+//   color: inherit;
+// }
+
+// .ais-search-box .ais-search-box--input {
+//   background-color: $form-background-color;
+// }
