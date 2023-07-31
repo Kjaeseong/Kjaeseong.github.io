@@ -4,14 +4,14 @@
 
 //코드블럭 폰트
 div.highlighter-rouge,
-figure.highlight {
+figure.highlight { //
   position: relative;
   margin-bottom: 1em;
-  background: $base00;
+  background: $base02; // _variables -> syntax highlighting (base16)
   color: $base05;
   font-family: $monospace;
-  font-size: $type-size-5;
-  line-height: 1.3;
+  font-size: $type-size-6; // _variables -> type scale
+  line-height: 1.2;
   border-radius: $border-radius;
 
   > pre,
