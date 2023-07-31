@@ -68,11 +68,14 @@ body {
   }
 }
 
+// 게시글
+
+// 글 제목
 .page__title {
   font-family: $cute;
   margin-top: 0;
   line-height: 1.2;
-  color: mix(#ff0000, $primary-color, 40%);
+  color: mix(#124d9a, $primary-color, 40%);
 
   & + .page__meta {
     margin-top: -0.5em;
