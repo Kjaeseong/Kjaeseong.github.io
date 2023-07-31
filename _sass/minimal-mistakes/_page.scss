@@ -341,6 +341,7 @@ body {
   }
 }
 
+// 게시글 내 카테고리 버튼
 .page__taxonomy-item-category {
   display: inside;
   margin-right: 5px;
@@ -349,13 +350,14 @@ body {
   text-decoration: none;
   border: 1px solid $background-color;
   border-radius: $border-radius;
-  background-color: #124d9a;
+  background-color: #93cbf2;
   font-family: $serif;
-  color: #ffffff; //mix(#fff, $primary-color, 2%);
+  color: #124d9a; //mix(#fff, $primary-color, 2%);
 
+  // 커서 댔을 때 색
   &:hover {
     text-decoration: none;
-    color: mix(#00adb5, $text-color, 40%); /* 커서 댈 때 색깔 */
+    color: mix(#00adb5, $text-color, 40%);
   }
 }
 
