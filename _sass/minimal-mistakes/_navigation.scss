@@ -521,13 +521,14 @@
   font-weight: bold;
 }
 
+// 카테고리 대분류
 .nav__sub-title {
   display: block;
   margin: 0.5rem 0;
   padding: 0.25rem 0;
   font-size: $type-size-3;
   font-family: $serif;
-  color: #ff0000; //mix(#ff0000,$primary-color,35%);
+  color: #2a68ba; //mix(#ff0000,$primary-color,35%);
   border-bottom: 1px solid $border-color;
 }
 
