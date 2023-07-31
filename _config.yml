@@ -12,15 +12,15 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "dark" # "default"  "air", "aqua", "contrast", , "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "aqua" # "default"  "air", "aqua", "contrast", , "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "ko-KR"
 title                    : " JStudy Blog "
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "JSK"
-description              : "개발 공부 블로그"
+name                     : "JCoder"
+description              : "공부하는 개발자의 블로그"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "Kjaeseong/comments" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -94,14 +94,14 @@ analytics:
 
 # Site Author
 author:
-  name             : "아직은 예비개발자"
+  name             : "JCoder"
   # avatar           : ""
-  bio              : "개발 공부하는 INFJ"
+  bio              : "공부할건 많으니까...\n\n"
   #location         : "Seoul, South Korea"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:sung9513@gmail.com"
+      url: "mailto:workcoder8927@gmail.com"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/Kjaeseong"
