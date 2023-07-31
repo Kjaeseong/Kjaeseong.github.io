@@ -11,9 +11,9 @@ $code-background-color: #93cbf2 !default; //`하이라이트 블록 배경`
 $code-background-color-dark: #0f87d1 !default;
 $form-background-color: mix(#260c9a, $background-color, 15%) !default;
 $footer-background-color: mix(#e4e4e4, $background-color, 20%) !default;  // 스크롤 다 내려갔을때 빈공간
-$link-color: mix(#00adb5, $text-color, 40%) !default;
-$link-color-hover: mix(#2a558c, $link-color, 25%) !default;   // 블로그 관리자 이름을 포함한 링크
-$link-color-visited: mix(#00adb5, $text-color, 40%) !default;
+$link-color: mix(#bf81e0, $text-color, 40%) !default;
+$link-color-hover: mix(#bf81e0, $link-color, 25%) !default;   // 블로그 관리자 이름을 포함한 링크
+$link-color-visited: mix(#bf81e0, $text-color, 40%) !default;
 $masthead-link-color: $text-color !default;
 $masthead-link-color-hover: mix(#000, $text-color, 20%) !default;
 $navicon-link-color-hover: mix(#000, $background-color, 30%) !default;
