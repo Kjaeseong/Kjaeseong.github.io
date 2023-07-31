@@ -4,13 +4,13 @@
 
 /* Colors */
 $background-color: #c9c8ac !default;
-$text-color: #5592d7 !default;
-$primary-color: #2e68d4 !default; // 카테고리 제목 및 포인트
-$border-color: mix(#fff, $background-color, 20%) !default;
-$code-background-color: #4D5357 !default;
-$code-background-color-dark: #3F4447 !default;
-$form-background-color: mix(#000, $background-color, 15%) !default;
-$footer-background-color: mix(#000, $background-color, 20%) !default;
+$text-color: #d75555 !default;
+$primary-color: #d48c2e !default; // 카테고리 제목 및 포인트
+$border-color: mix(#ffec1e, $background-color, 20%) !default;
+$code-background-color: #0fff3b !default;
+$code-background-color-dark: #0f87d1 !default;
+$form-background-color: mix(#260c9a, $background-color, 15%) !default;
+$footer-background-color: mix(#ed00f1, $background-color, 20%) !default;
 $link-color: mix(#00adb5, $text-color, 40%) !default;
 $link-color-hover: mix(#fff, $link-color, 25%) !default;
 $link-color-visited: mix(#00adb5, $text-color, 40%) !default;
