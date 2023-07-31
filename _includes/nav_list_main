@@ -1,0 +1,122 @@
+{% assign sum = site.posts | size %}
+
+<nav class="nav__list">
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">{{ site.data.ui-text[site.locale].menu_label }}</label>
+  <ul class="nav__items" id="category_tag_menu">
+</li>
+<li>
+        <span class="nav__sub-title">Programming</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "C" %}
+                        <li><a href="/categories/c" class="">C ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Cpp" %}
+                        <li><a href="/categories/cpp" class="">C++ ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Cs" %}
+                        <li><a href="/categories/cs" class="">C# ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+
+        <span class="nav__sub-title">Coding Test</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Baekjoon" %}
+                        <li><a href="/categories/baekjoon" class="">Baekjoon ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Programmers" %}
+                        <li><a href="/categories/programmers" class="">Programmers ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+
+        <span class="nav__sub-title">Unity</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "UnityTutorials" %}
+                        <li><a href="/categories/unitytutorials" class="">Unity Tutorials ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "UnityDiscussion" %}
+                        <li><a href="/categories/unitydiscussion" class="">Unity Discussion ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+
+            <span class="nav__sub-title">CS</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Algorithm" %}
+                        <li><a href="/categories/algorithm" class="">Algorithm ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "DataStructure" %}
+                        <li><a href="/categories/datastructure" class="">Data Structure ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Network" %}
+                        <li><a href="/categories/network" class="">Network ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+
+        <span class="nav__sub-title">ETC.</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "DesignPattern" %}
+                        <li><a href="/categories/designpattern" class="">Design Pattern ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Git" %}
+                        <li><a href="/categories/git" class="">Git ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Etc" %}
+                        <li><a href="/categories/Etc" class="">Etc ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </li>
+
+        <br>
+        <li>
+            <span style="font-family:'EarlyFontDiary';">전체 게시글 : </style> <span style="font-family:'EarlyFontDiary';">{{sum}}</style>
+            </li>
+            <li>	
+                <br>      
+                <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fkjaeseong.github.io&count_bg=%2300ADB5&title_bg=%23373C3F&icon=opsgenie.svg&icon_color=%2300ADB5&title=Today+%2F+Total&edge_flat=false"/>
+            </li>
+        <li>
+  </ul>
+</nav>
+
