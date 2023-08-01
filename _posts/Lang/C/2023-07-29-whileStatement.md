@@ -234,8 +234,8 @@ int main()
 }
 ```
 
-- 결과 : ![whileStatement_05](/assets/image/whileStatement_05.png)
-  - 
+- 결과 : 
+  - ![whileStatement_05](/assets/image/whileStatement_05.png)
 
 - 프로그램을 실행하는 PC의 사양 등 여러 요소가 고려되어야 하겠지만, 수치상으로는 `70배`의 차이가 난다. 물론 극단적인 상황을 표현하기 위한 예시에 불과하지만 게임과 같이 프레임 단위로 연산을 해야하는 상황이라면 최적화를 위해 한번쯤은 고려해봐야 할 연산량의 차이인 것이다.
 
