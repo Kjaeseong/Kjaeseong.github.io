@@ -63,7 +63,7 @@ int main()
 ```
 
 - 결과 : 
-  - ![whileStatement_01](https://github.com/Kjaeseong/Kjaeseong.github.io/assets/103081763/8365a590-7b2c-46f9-bb5c-9dce524350e9)
+  - ![whileStatement_01](/assets/image/whileStatement_01.png)
 
 ### 조건식을 사용하지 않고 반복문 제어하기
 - 반복문을 선언할 당시의 조건식만 가지고 `생략`, `정지`등을 제어하기란 굉장히 비효율적이고 어려운 방법일 것이다. 이럴 때는 `continue`, `break` 등을 사용해 반복문을 제어할 수 있다.
@@ -98,7 +98,7 @@ int main()
 ```
 
 - 결과 :
-  - ![whileStatement_02](https://github.com/Kjaeseong/Kjaeseong.github.io/assets/103081763/2eb2d0c2-35ee-423a-8575-8e33ef85e870)
+  - ![whileStatement_02](/assets/image/whileStatement_02.png)
 
 - C, C++, C# 모두 동일한 while을 사용해 로직을 반복수행 할 수 있고, 조건식 안의 결과가 참일 때 결과를 수행하며, 여기서 말하는 `조건식이 참`이라는 개념은 `C, C++` 및 `C#`의 사용법에 차이가 있다.
 
@@ -172,7 +172,7 @@ int main()
 ```
 
 - 결과 : 
-  - ![whileStatement_03](https://github.com/Kjaeseong/Kjaeseong.github.io/assets/103081763/5e83bba4-353b-4380-b3e2-de5314b91ea7)
+  - ![whileStatement_03](/assets/image/whileStatement_03.png)
 
 
 ## 주의점
@@ -208,7 +208,7 @@ int main()
 }
 ```
 
-- 결과 : ![whileStatement_04](https://github.com/Kjaeseong/Kjaeseong.github.io/assets/103081763/a1de53f3-a464-41c7-b16b-b39eea5d7d37)
+- 결과 : ![whileStatement_04](/assets/image/whileStatement_04.png)
   - 
 
 ```cpp
@@ -236,7 +236,7 @@ int main()
 }
 ```
 
-- 결과 : ![whileStatement_05](https://github.com/Kjaeseong/Kjaeseong.github.io/assets/103081763/253030ee-5f34-4928-acd8-ce1a98955faa)
+- 결과 : ![whileStatement_05](/assets/image/whileStatement_05.png)
   - 
 
 - 프로그램을 실행하는 PC의 사양 등 여러 요소가 고려되어야 하겠지만, 수치상으로는 `70배`의 차이가 난다. 물론 극단적인 상황을 표현하기 위한 예시에 불과하지만 게임과 같이 프레임 단위로 연산을 해야하는 상황이라면 최적화를 위해 한번쯤은 고려해봐야 할 연산량의 차이인 것이다.
@@ -280,4 +280,4 @@ int main()
 ```
 
 - 결과 : 
-  - ![whileStatement_06](https://github.com/Kjaeseong/Kjaeseong.github.io/assets/103081763/d6b9f675-dbc7-4e24-9a36-64ede1b6bbdf)
+  - ![whileStatement_06](/assets/image/whileStatement_06.png)

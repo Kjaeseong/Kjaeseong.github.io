@@ -23,7 +23,7 @@ last_modified_at: 2023-07-16
 ## 전설의 프로그래머 밈
 - 프로그래밍을 배워보지 않은 사람도 한번 쯤은 접해봤을 전설의 밈이 하나 있다.
 
-![ifStatement_01](https://github.com/Kjaeseong/Kjaeseong.github.io/assets/103081763/f1bf485f-7c2e-49e4-8b55-11d65a78d0f3)
+![ifStatement_01](/assets/image/ifStatement_01.png)
 
 - 위의 밈은 프로그래밍적 사고를 아주 정확히 나타내줄 수 있는 밈인데..아내가 `마트에서 우유를 사오는데 아보카도가 있다면 6개를 사오라`고 하는 내용이다. ~~이렇게까지 할 필요 없음에도 필자는 괴짜에 가깝기 때문에 굳이~~ 코드화 해보자면 대충 아래와 같이 표현할 수 있을 것이다.
 
@@ -50,7 +50,7 @@ int main()
 
 - if문은 사용 방법이 아주 심플하기 때문에 더할 나위 없이 깔끔한 코드가 작성된다. 조건을 충족하는지 판단하고 충족할때와 그 예외의 상황 처리도 할 수 있는데, 그 흐름을 살펴보자면 아래 그림과 같다
 
-![ifStatement_02](https://github.com/Kjaeseong/Kjaeseong.github.io/assets/103081763/b52c2ca5-5c4b-4f25-bf37-891a6d3a8b0e)
+![ifStatement_02](/assets/image/ifStatement_02.png)
 
 - 조건에 따라 동작이 달라진 다는 것은, 작업의 흐름 상에서 분기가 갈리는 것과 같다. 그렇기 때문에 조건문은 `분기문`으로 불리기도 한다. 자세한 사용 방법은 다음 챕터에서 살펴보자.
 
@@ -85,7 +85,7 @@ int main()
 ```
 
 #### 결과
-- ![ifStatement_03](https://github.com/Kjaeseong/Kjaeseong.github.io/assets/103081763/e8aa0ce3-5534-41d1-9180-73b71ec49113)
+- ![ifStatement_03](/assets/image/ifStatement_03.png)
 
 - 의도한 결과대로 5와 16의 합은 21이기 때문에 가장 첫 조건식인 `if(A + B > 20) {}`의 구문이 실행되었을 것이다. 값을 바꿔서 실행해 본다면, 각 조건식에 맞는 결과를 확인할 수 있다. 다만 예시에서는 `else if`를 사용했는데, 이는 단순히 `if`를 여러번 사용하는 것 과는 차이점이 있다. 아래의 예시를 보고 판단해보겠다
 
@@ -117,14 +117,14 @@ int main()
 
 - 코드를 살펴보면, A의 데이터는 50이고, 조건식들은 차례대로 20초과, 25초과, 30초과 라는 조건을 가지고 있다. 즉, 모든 조건이 충족된다는 말인데 결과는 어떻게 출력될지 확인해보자
 
-![ifStatement_04](https://github.com/Kjaeseong/Kjaeseong.github.io/assets/103081763/d2e8616d-4908-43dc-bc19-6a05307ddb1f)
+![ifStatement_04](/assets/image/ifStatement_04.png)
 
 - 모든 조건식이 참이기 때문에 모든 구문이 실행될 것 같지만 맨 위의 구문만이 실행되는 것을 확인할 수 있다. 이로서 알 수 있는 것은 `else if`문을 사용해 여러 조건을 추가하고, 여러 조건이 충족될 경우 위에 있는 구문이 우선적으로 채택된다는 점이다. 
 
 ## 사용시 주의점
 - 당연히도 if문 내부에서 추가 if문을 사용해 여러 조건을 추가할 수 있다. 분명 if문 내부에서 if문을 다중으로 사용하는 것은 흔한 일이고 사용할 수 밖에 없는 상황이란 것도 있지만, 자칫 잘못하면 ~~언어는 다르지만~~ 아래와 같은 형태가 만들어지는 불상사를 초래할 수도 있다.
   
-![ifStatement_05](https://github.com/Kjaeseong/Kjaeseong.github.io/assets/103081763/2251d396-8e87-416f-ae83-174414a8fa23)
+![ifStatement_05](/assets/image/ifStatement_05.png)
 
 - 미관상...도 그렇고 코드 가독성 면에서도 큰 이점을 보기 힘들기 때문에, 아래와 같이 연산자를 사용해 여러 조건식을 한번에 걸거나
 
