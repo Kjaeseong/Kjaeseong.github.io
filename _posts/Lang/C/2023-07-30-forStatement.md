@@ -11,8 +11,8 @@ toc_sticky: true
 
 use_math: true
 
-date: 2023-07-30
-last_modified_at: 2023-07-30
+date: 2023-08-01
+last_modified_at: 2023-08-01
 ---
 
 # 반복문 - for
