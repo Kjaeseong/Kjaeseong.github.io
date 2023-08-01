@@ -472,7 +472,7 @@
     color: inherit;
     font-size: $type-size-3;
     font-family: $cute;
-    color: #2c9dca; //mix(#fff,$primary-color,80%);
+    color: $text-color; //mix(#fff,$primary-color,80%);
 
     &:hover {
       text-decoration: underline;
@@ -529,7 +529,7 @@
   padding: 0.25rem 0;
   font-size: $type-size-3;
   font-family: $serif;
-  color: #2a68ba; //mix(#ff0000,$primary-color,35%);
+  color: $primary-color; //mix(#ff0000,$primary-color,35%);
   border-bottom: 1px solid $border-color;
 }
 

@@ -75,7 +75,7 @@ body {
   font-family: $cute;
   margin-top: 0;
   line-height: 1.2;
-  color: mix(#124d9a, $primary-color, 40%);
+  color: $primary-color;
 
   & + .page__meta {
     margin-top: -0.5em;
@@ -350,14 +350,14 @@ body {
   text-decoration: none;
   border: 1px solid $background-color;
   border-radius: $border-radius;
-  background-color: #93cbf2; // 배경 색
+  background-color: $code-background-color; // 배경 색
   font-family: $serif;
-  color: #124d9a; //mix(#fff, $primary-color, 2%); 폰트 색
+  color: $text-color; //mix(#fff, $primary-color, 2%); 폰트 색
 
   // 커서 댔을 때 폰트 색
   &:hover {
     text-decoration: none;
-    color: mix(#00adb5, $text-color, 40%);
+    color: mix(#000000, $text-color, 40%);
   }
 }
 
