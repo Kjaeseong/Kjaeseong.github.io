@@ -1,11 +1,11 @@
 ---
 title: "C#언어"
 layout: archive
-permalink: categories/cs
+permalink: categories/csharp
 author_profile: true
 sidebar_main: true
 ---
 
 
-{% assign posts = site.categories.Cs %}
+{% assign posts = site.categories.Csharp %}
 {% for post in posts %} {% include archive-single.html type=page.entries_layout %} {% endfor %}

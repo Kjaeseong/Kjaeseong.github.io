@@ -4,7 +4,7 @@ title: "조건문 - switch"
 categories:
   - C
   - Cpp
-  - Cs
+  - Csharp
 
 toc: true
 toc_sticky: true

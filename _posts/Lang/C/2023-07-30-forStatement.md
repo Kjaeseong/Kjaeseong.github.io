@@ -4,7 +4,7 @@ title: "반복문 - for"
 categories:
   - C
   - Cpp
-  - Cs
+  - Csharp
 
 toc: true
 toc_sticky: true
