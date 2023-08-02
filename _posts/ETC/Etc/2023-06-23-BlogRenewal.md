@@ -2,8 +2,6 @@
 title: "Blog Renewal" 
 
 categories:
-  - Cpp
-  - Cs
   - Baekjoon
   - Programmers
   - UnityTutorials
