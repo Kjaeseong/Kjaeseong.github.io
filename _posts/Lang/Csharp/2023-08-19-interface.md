@@ -32,6 +32,7 @@ last_modified_at: 2023-08-19
   - 개별적인 인스턴스를 생성할 수 없다
     - 생성자도 사용할 수 없다.
     - (중요)하지만 인터페이스 형식으로 생성된 변수로 인터페이스를 상속받는 클래스의 인스턴스를 참조할 수 있다
+  - 인터페이스는 다중 상속이 가능하다
 
 ## 사용해보자!
 - 인터페이스를 선언할 때는 암시적으로 이름 앞에 `대문자 I`를 붙이는 관습이 있다. 물론 안 붙여도 동작은 하지만 Visual Studio에서는 붙일 것을 권장한다.(블로그 주인장이 Visual Studio에서 I를 붙일것을 권장한다는게 아니다. 진짜로 Visual Sutudio가 I를 붙이는것을 추천한다는 메세지를 출력한다.)
@@ -118,12 +119,12 @@ class Program
 
 public interface IAnimal
 {
-    public void Work();
+    public void Walk();
 }
 
 public class Dog : IAnimal
 {
-    public void Work()
+    public void Walk()
     {
         Console.WriteLine("강아지가 걸어용");
     }
@@ -131,7 +132,7 @@ public class Dog : IAnimal
 
 public class Cat : IAnimal
 {
-    public void Work()
+    public void Walk()
     {
         Console.WriteLine("고양이가 걸어용");
     }
@@ -139,7 +140,7 @@ public class Cat : IAnimal
 
 public class Monkey : IAnimal
 {
-    public void Work()
+    public void Walk()
     {
         Console.WriteLine("원숭이가 걸어용");
     }
